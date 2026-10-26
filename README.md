@@ -1,9 +1,9 @@
 # All of my Irons in the Fire!
 *A Claude plugin by Mindful Tech Projects*
 
-**Current version: 0.8.0** · [Website](https://mindfultechsupport.github.io/All-of-the-Irons-in-the-Fire-App-/) · [Change summary](CHANGELOG.md) · [All releases](releases/)
+**Current version: 0.8.1** · [Website](https://mindfultechsupport.github.io/All-of-the-Irons-in-the-Fire-App-/) · [Change summary](CHANGELOG.md) · [All releases](releases/)
 
-**[💬 Send feedback](../../issues/new?template=feedback.yml)** · **[❤️ Support on Patreon](https://www.patreon.com/mindfultechsupport)**
+**[❓ Help](HELP.md)** · **[💬 Send feedback](../../issues/new?template=feedback.yml)** · **[❤️ Support on Patreon](https://www.patreon.com/mindfultechsupport)**
 
 ## What it does
 
@@ -60,7 +60,7 @@ This repository is a plugin marketplace. Add it once, and new versions can come 
 
 ### Option 2: install from a file
 
-1. Open [the latest release](../../releases/latest) and download the file ending in `.plugin` (currently `all-my-irons-in-the-fire-v0.8.0.plugin`).
+1. Open [the latest release](../../releases/latest) and download the file ending in `.plugin` (currently `all-my-irons-in-the-fire-v0.8.1.plugin`).
 2. In the Claude desktop app or claude.ai, go to **Customize → Plugins**.
 3. Remove an older version if it's listed, then upload the file.
 
@@ -98,6 +98,7 @@ All of my Irons in the Fire! is free and made by one person at Mindful Tech Proj
 | `daily-nudge` | The optional daily nudge at a time you choose: what's waiting, in a few warm lines |
 | `at-my-desk` | The desk list across all irons, and guided 15-minute desk sessions with spoken check-offs |
 | `my-data` | What's saved and permission to save it; see, export, or forget everything |
+| `help` | Plain answers about Claude's notifications, installing, nudges, voice, and your data |
 | `irons-review` | Look at everything; add, rename, merge, rest, archive, revive; update whys |
 | `give-it-a-forge` | Turn a hot iron into its own Claude Project |
 
@@ -107,6 +108,7 @@ All of my Irons in the Fire! is free and made by one person at Mindful Tech Proj
 README.md        This page, always describing the current version
 CHANGELOG.md     What changed in every version, newest first
 LICENSE          Usage terms
+HELP.md          Answers to common questions, including Claude's own notifications
 PRIVACY.md       What the plugin does (and doesn't do) with your information
 .claude-plugin/  Marketplace catalog, so Claude can install the plugin from this repo
 docs/            The website (GitHub Pages)
@@ -120,6 +122,7 @@ releases/        Frozen copies of every version, version number in each file nam
   v0.6.0/
   v0.7.0/
   v0.8.0/
+  v0.8.1/
 ```
 
 ## Versioning

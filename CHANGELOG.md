@@ -5,6 +5,19 @@ Each version lists what changed and why, newest first.
 
 ---
 
+## 0.8.1 — 2026-10-26
+
+**Theme: help when you need it.** Prompted by a Claude notification Ed saw while driving and couldn't read before it disappeared.
+
+### New
+- **Help (new `help` skill and HELP.md).** Ask "help," "what does this notification mean?", or "Claude told me to update my memory settings" and get a short, plain answer.
+- **Explains Claude's own notices**, starting with the "include sensitive topics in memory" prompt: what it is, that the choice is yours, where the setting lives, and that the plugin works either way.
+- **Keeping work and personal separate:** separate accounts, or turning off "Use account memory" on a Claude Project.
+- **"Check my daily nudge":** reports whether the nudge is on, when it runs next, and whether the last one worked.
+- Help is linked from the README and the website.
+
+---
+
 ## 0.8.0 — 2026-10-26
 
 **Theme: always with you, and always yours.** The plugin keeps track of the things you can only do at a screen and walks you through them out loud. And you always know what it remembers, agree to it, and can erase it in one step.
