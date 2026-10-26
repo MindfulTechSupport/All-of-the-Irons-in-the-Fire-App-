@@ -60,6 +60,8 @@ releases/        Frozen copies of every version, version number in each file nam
 
 Versions follow [Semantic Versioning](https://semver.org): `MAJOR.MINOR.PATCH`. Each release gets a git tag (`v0.2.0`), a GitHub Release with notes and the downloadable plugin, an entry in CHANGELOG.md, and a folder in `releases/` with versioned copies of the plugin, README, and design notes.
 
+Releases are published automatically by the [Publish releases](.github/workflows/release.yml) workflow. To ship a new version: update `plugin/` and its version number, add the version's section to CHANGELOG.md, add a `releases/vX.Y.Z/` folder with the versioned files, and push to `main`. GitHub creates the tag and Release page on its own.
+
 ## Where your map lives
 
 Your Irons Map is a short, readable note kept in Claude's memory (if memory is on) or in a file called `irons-in-the-fire.md` in your working folder. You can open and edit it anytime.

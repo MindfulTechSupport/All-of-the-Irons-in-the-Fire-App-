@@ -13,7 +13,7 @@ No change to the plugin itself.
 - `README.md` restored to its standard name so GitHub shows it on the front page; it now states the current version, install steps, layout, and versioning rules.
 - Versioned snapshots: `README-v0.1.0.md`, `README-v0.2.0.md`, `design-notes-v0.2.0.md`, and `all-my-irons-in-the-fire-vX.Y.Z.plugin`.
 - Added `LICENSE` (all rights reserved while in early development) and `.gitignore`.
-- Added standard version tags `v0.1.0` and `v0.2.0` with matching GitHub Releases.
+- Added the **Publish releases** automation: whenever a new `releases/vX.Y.Z/` folder lands on `main`, GitHub creates the `vX.Y.Z` tag and a Release page with notes from this file and the versioned files attached. Its first run publishes `v0.1.0` and `v0.2.0`.
 
 ---
 
