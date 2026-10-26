@@ -5,6 +5,31 @@ Each version lists what changed and why, newest first.
 
 ---
 
+## 0.8.0 — 2026-10-26
+
+**Theme: always with you, and always yours.** The plugin keeps track of the things you can only do at a screen and walks you through them out loud. And you always know what it remembers, agree to it, and can erase it in one step.
+
+### New
+- **Desk list (new `at-my-desk` skill).** Anything that needs a screen, from any iron, goes on one list: "put that on my desk list." Each item gets plain steps and a time estimate.
+- **15-minute desk sessions.** Say "I'm at my desk" or "I'm parked," and the plugin picks what fits in about 15 minutes (most important first) and walks you through it **one step at a time, spoken or typed**: "Ready for number one?" … "Done." … "Nice, that's one down. Ready for number two?" Say done, skip, later, or stop. Leftovers roll to next time, no guilt.
+- **Nudge delivery choices.** The daily nudge can arrive as a phone notification, an email, or both. Texting works through a service you've connected yourself (for example Zapier).
+- **Ask before remembering (new `my-data` skill).** At setup, the plugin explains in plain words what it will remember, where, and how to erase it, and asks permission before saving anything. Say no and it still helps you, without saving. Users upgrading from an older version see this once.
+- **"What do you know about me?"** Shows everything saved, in plain words, with an option to export a copy.
+- **"Forget everything."** Always offers an export file first, so you can keep your irons and come back later, then erases the whole irons map after one clear confirmation, and offers to stop the daily nudge too. "Forget [one thing]" removes just that.
+- **"Restore my irons."** Share your export file and pick up right where you left off.
+- **30-day check-in:** "Still okay with me remembering your irons between chats?"
+- **Feedback in your own words.** Say "send feedback to the developer" and just talk. The plugin asks a few clarifying questions, boils it down to what you're really asking for, checks it with you, and drafts the note for you to submit.
+
+### Changed
+- `later-list` becomes `desk-list`, with steps, minutes, and priority per item. Older items move over automatically.
+- PRIVACY.md now covers consent, what's saved, how long it's kept, and how to see or erase it.
+- Map fields added: `consent`, `storage`, `nudge-delivery`, `desk-list`.
+
+### For Anthropic's directory
+- These consent and erase features answer the privacy rules (1D, 1E, 3A) and are a step toward 1G. Whether remembering between sessions is allowed in the directory is Anthropic's call; we'll ask them directly when we submit.
+
+---
+
 ## 0.7.0 — 2026-10-26
 
 **Theme: going public.** A home on the web, an easier way to install, a way for users to talk back, and a way to support the creator.

@@ -5,7 +5,7 @@ Use these steps to walk a user through installing or updating. Give one step at 
 ## Before you start
 
 - **This needs a computer.** Plugins are added in Claude on the web (claude.ai) or the Claude desktop app. The Claude phone app can't install a plugin from a file.
-- If the user is on a phone or driving, don't start. Say it needs a computer, and save "Update All of my Irons in the Fire!" to `later-list`.
+- If the user is on a phone or driving, don't start. Say it needs a computer, and save "Update All of my Irons in the Fire!" to the desk list, with these steps and about 3 minutes.
 - Never ask the user to sign out of anything, share a password, or let anyone else into their account. Installing never needs that.
 
 ## Easiest: add the marketplace (one time)

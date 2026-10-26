@@ -1,7 +1,7 @@
 # All of my Irons in the Fire!
 *A Claude plugin by Mindful Tech Projects*
 
-**Current version: 0.7.0** · [Website](https://mindfultechsupport.github.io/All-of-the-Irons-in-the-Fire-App-/) · [Change summary](CHANGELOG.md) · [All releases](releases/)
+**Current version: 0.8.0** · [Website](https://mindfultechsupport.github.io/All-of-the-Irons-in-the-Fire-App-/) · [Change summary](CHANGELOG.md) · [All releases](releases/)
 
 **[💬 Send feedback](../../issues/new?template=feedback.yml)** · **[❤️ Support on Patreon](https://www.patreon.com/mindfultechsupport)**
 
@@ -14,6 +14,8 @@ All of my Irons in the Fire! helps people keep every iron in the fire glowing: t
 - **It keeps time with you.** It knows what time it is and how long you've been away, so you get "Good morning, Ed. Hope you got some rest," not a cold start.
 - **It picks up where you left off.** "Last time we were on the food truck. Want a quick summary of what we were talking about?" Then: "Keep going on the food truck, or work on something else?"
 - **It asks a question to get you going.** "How are you doing this afternoon, Ed?" or "What's on your mind?"
+- **It keeps a desk list.** Anything that needs a screen goes on one list across all your irons. Say "I'm at my desk" and it walks you through about 15 minutes of it, one step at a time, out loud if you like: "Ready for number one?" "Done." "Nice, number two…"
+- **It asks before it remembers.** It tells you exactly what it saves, and "what do you know about me" or "forget everything" work anytime.
 - **It talks like a person when you're talking out loud.** In Claude's voice mode, or when you say "I'm driving," it speaks in short, plain sentences, one question at a time, hands-free. Anything that needs a screen is saved for later.
 - **It helps you stay up to date.** Every couple of weeks it offers to check for a new version (only looking online if you say yes) and walks you through updating.
 - **It makes feedback easy.** Say "send feedback" and it drafts a note to the creator with you.
@@ -58,7 +60,7 @@ This repository is a plugin marketplace. Add it once, and new versions can come 
 
 ### Option 2: install from a file
 
-1. Open [the latest release](../../releases/latest) and download the file ending in `.plugin` (currently `all-my-irons-in-the-fire-v0.7.0.plugin`).
+1. Open [the latest release](../../releases/latest) and download the file ending in `.plugin` (currently `all-my-irons-in-the-fire-v0.8.0.plugin`).
 2. In the Claude desktop app or claude.ai, go to **Customize → Plugins**.
 3. Remove an older version if it's listed, then upload the file.
 
@@ -75,6 +77,9 @@ Ask "is there a new version?" anytime, or let the plugin offer during a review. 
 - **"I'm driving, talk me through it."** Switches to hands-free, spoken style.
 - **"Put the hang gliding trip on hold. Waiting on gear."** Rests an iron with a note.
 - **"Review my irons."** A quick look at everything: keep, rest, or pull out of the fire.
+- **"Put that on my desk list."** Saves a screen-only task for later.
+- **"I'm at my desk."** A guided 15-minute session through your desk list.
+- **"What do you know about me?"** Shows everything saved; "forget everything" erases it.
 - **"Send feedback."** Drafts a note to the creator with you.
 
 ## Feedback and support
@@ -91,6 +96,8 @@ All of my Irons in the Fire! is free and made by one person at Mindful Tech Proj
 |---|---|
 | `fire-up` | Clock and time-of-day greeting, quick summary and continue-or-switch, sorting, learning, whys, spark catching, new and cooling irons, catch-up count, nickname check-in, first-time setup and daily-nudge setup, voice-friendly mode, update check, feedback |
 | `daily-nudge` | The optional daily nudge at a time you choose: what's waiting, in a few warm lines |
+| `at-my-desk` | The desk list across all irons, and guided 15-minute desk sessions with spoken check-offs |
+| `my-data` | What's saved and permission to save it; see, export, or forget everything |
 | `irons-review` | Look at everything; add, rename, merge, rest, archive, revive; update whys |
 | `give-it-a-forge` | Turn a hot iron into its own Claude Project |
 
@@ -112,6 +119,7 @@ releases/        Frozen copies of every version, version number in each file nam
   v0.5.0/
   v0.6.0/
   v0.7.0/
+  v0.8.0/
 ```
 
 ## Versioning
