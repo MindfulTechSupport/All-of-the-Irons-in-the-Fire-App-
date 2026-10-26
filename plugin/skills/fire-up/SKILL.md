@@ -65,8 +65,14 @@ Address the user by name. If the user gave Claude a nickname (`assistant-name` i
 - **1 to 6 hours:** "Good [afternoon], Ed. Welcome back." Recap the last session in one line. This also applies when the user returns to the same chat after an hour or more.
 - **Overnight** (the last session was the previous evening or night and now it's morning): "Good morning, Ed. Hope you got some rest." Recap in one line.
 - **1 to 2 days:** greet, then recap in one line.
-- **3+ days:** "Good to see you, Ed. It's been [N] days." Then ask: "Any new irons in the fire, or any you're done with?" Never frame the gap as a failure.
+- **3+ days:** "Good to see you, Ed. It's been [N] days." Give the catch-up count (below), then ask: "Any new irons in the fire, or any you're done with?" Never frame the gap as a failure.
 - **First session ever:** run First-time setup (section 8).
+
+**Catch-up count** (after a day or more away). Count what's waiting: snoozes that came due, irons that started cooling while the user was away, and sparks saved but not yet dealt with. If anything is waiting, say how long it's been and how much is waiting, in one line, and offer the short list rather than dumping it:
+"It's been 4 days, Ed. There are 3 things to catch up on: 2 irons cooling and a spark you had about the food truck. Want the quick rundown, or jump straight in?"
+If they want the rundown, show at most two items first, then offer the rest. If nothing is waiting, say so; that's good news ("Nothing's gone cold while you were away.").
+
+**Nickname check-in.** If the user gave Claude a nickname and `nickname-checked` is more than 30 days ago (or missing), ask once, lightly, after the greeting: "Quick one: still happy calling me ChatBro, or want to switch it up?" Save today's date as `nickname-checked` whatever the answer. Skip this if the user is clearly in a hurry, and never ask more than once a session.
 
 **Pick up where you left off.** If `last-session` is recorded, mention it in one line and offer to continue:
 "Last time we were working on the food truck menu, and we'd left off deciding on breakfast tacos. Want to pick that back up?"
@@ -136,17 +142,32 @@ If the user says something belongs elsewhere ("move catering to Food Truck"), up
 3. "Tell me your irons in the fire right now, the main parts of your life, and a few things that belong in each. Rough is fine." Example: "Day Job (reports, my manager Sam), Food Truck (menu, permits), Home (car maintenance, honey-do list)."
 4. "For any that you want, tell me the why, the reason it matters to you. Skip any you like."
 5. Ask once: "How often do you want a bigger look at all your irons: every two weeks, monthly, or never?" Default monthly.
-6. Ask once: "If you disappear for a while, do you want a reminder even when you haven't opened Claude?" If yes and scheduling tools are available, offer a scheduled task; otherwise say check-ins happen when they next open a session.
-7. Save the timezone and `last-seen`, create the map, and say in one line what was set up.
+6. **Daily nudge.** Ask once: "Want a nudge from me at a certain time of day, even on days you don't open Claude? For example, 8:30 in the morning on weekdays. Or no nudges, and I'll just catch you up when you come back." If they pick a time, set it up as in section 9 (Daily nudge).
+7. Save the timezone, `last-seen`, and `nickname-checked` (today), create the map, and say in one line what was set up.
 
-Users can change either name anytime ("call me Eddie," "call yourself ChatBro").
+Users can change either name anytime ("call me Eddie," "call yourself ChatBro"), and change or stop the nudge anytime ("nudge me at 7 instead," "stop the nudges").
 
-## 9. Wrap up
+## 9. Daily nudge (optional scheduled task)
+
+A scheduled task lets the plugin reach out first, at a time the user picks, even when no chat is open. Each nudge runs the `daily-nudge` skill.
+
+To set one up, only after the user picks a time:
+1. Confirm the details in one line: "Every weekday at 8:30 AM Central, I'll send you a short nudge about your irons. Sound good?"
+2. If scheduling tools are available (look for one that creates scheduled tasks), create a recurring task in the user's timezone with this as its instruction: "Run the daily-nudge skill from the All of my Irons in the Fire! plugin." Name it "Irons in the Fire: daily nudge." The user may be asked to approve it.
+3. Save `nudge-time`, `nudge-days`, and the task's name in the map. Tell the user in one line what was set up and how to change it.
+4. If no scheduling tool is available, say so plainly: nudges will happen when they next open Claude instead. Save their preferred time anyway; you can use it to greet them ("You usually like a nudge around 8:30; here's your catch-up.").
+
+**Users upgrading from an older version** have no `nudge-time` in their map. Offer the daily nudge once, at a calm moment (not in the middle of a task). If they decline, save `nudge-time: none` so it isn't offered again.
+
+To change or stop the nudge, update or delete the scheduled task (with the user's yes) and update the map. Never create, change, or delete a scheduled task without the user's yes.
+
+## 10. Wrap up
 
 Keep the clock current. Update the map at natural stopping points (a task finished, a switch to another iron, the user saying goodnight or "talk later"), not only at the very end, since people often just walk away:
 - `last-seen`: the current date, time, and timezone
 - `last-session`: the iron, where you left off (one line), and the next question or step, if there is one
 - `last-opener`: the opener question used this session
+- `nickname-checked`, if the nickname check-in happened
 - `last-touched` for the iron(s) worked on
 - new keywords, irons, whys, sparks, snoozes, or status changes the user confirmed
 

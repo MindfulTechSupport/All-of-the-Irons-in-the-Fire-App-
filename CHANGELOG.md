@@ -5,6 +5,26 @@ Each version lists what changed and why, newest first.
 
 ---
 
+## 0.4.0 — 2026-10-26
+
+**Theme: reaching out, and catching up.** The plugin can now come to you at a time you choose, tells you what's waiting when you've been away, and checks in on the little things like its nickname.
+
+### New
+- **Daily nudge at a time you pick.** Setup asks whether you want a nudge at a certain time of day (for example 8:30 AM on weekdays). If yes, it sets up a scheduled task, with your approval, that sends a short, warm message about what's waiting, even on days you don't open Claude. Change it or stop it anytime ("nudge me at 7 instead," "stop the nudges").
+- **New `daily-nudge` skill.** Writes the nudge: a time-of-day greeting, where you left off, at most two things waiting, and one easy next step. Signed with your nickname for Claude. Never guilt.
+- **Catch-up count.** After a day or more away, the greeting says how long it's been and how much is waiting: "It's been 4 days, Ed. There are 3 things to catch up on." It offers a quick rundown, two items at a time, instead of dumping everything.
+- **Nickname check-in.** About once a month, it asks lightly whether the nickname still fits: "Still happy calling me ChatBro?"
+- **Reviews include the nickname and nudge.** The periodic review checks both.
+- **Upgrading users get offered the nudge once**, at a calm moment, and aren't asked again if they decline.
+
+### Map format
+- Added `nickname-checked`, `nudge-time`, `nudge-days`, `nudge-task`, and `last-nudged`. Older maps keep working.
+
+### Setup questions (in order)
+1. Your name  2. A nickname for Claude  3. Your irons in the fire  4. Their whys (optional)  5. How often to review  6. A daily nudge time (optional)
+
+---
+
 ## 0.3.0 — 2026-10-26
 
 **Theme: keeping time with you.** You sleep, you work, you come back. The plugin should know you've been away and pick up the conversation like a friend would, not start over.

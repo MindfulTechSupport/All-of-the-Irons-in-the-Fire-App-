@@ -14,6 +14,11 @@ last-session:
   left-off: deciding the breakfast taco lineup for the farmers market
   next: pick two tacos and price them
 last-opener: "What's on your mind?"
+nickname-checked: 2026-10-26     # last time we asked if the nickname still fits (every ~30 days)
+nudge-time: "08:30"              # daily nudge time, or none
+nudge-days: weekdays             # every day | weekdays | custom list
+nudge-task: "Irons in the Fire: daily nudge"
+last-nudged: 2026-10-26 08:30
 review-every: monthly          # every two weeks | monthly | never
 last-review: 2026-10-01
 away-reminder: scheduled task   # scheduled task | next session only
