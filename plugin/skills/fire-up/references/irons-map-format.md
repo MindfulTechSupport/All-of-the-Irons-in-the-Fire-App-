@@ -36,6 +36,17 @@ desk-list:                      # screen-only tasks across all irons (see the at
     minutes: 5
     priority: normal
     added: 2026-10-26
+    done:                         # date when finished; shown crossed out until seen, then moved to done-list
+who-i-am: [founder, ADHD brain, dreamer, next chapter]   # optional; the user's own picks, only to choose which helpers to offer
+quiet-hours: "weekdays 18:00-20:00, nightly 22:00-07:00"  # or none
+brain-care:
+  break-after: 90 minutes        # or off
+  suggestions: [water, move, eyes, fresh air]
+  energy: medium 2026-10-26
+  energy-check: on
+done-list:
+  - 2026-10-26: Turned on the website (plugin)
+  - 2026-10-26: Emailed the commissary (food truck)
 review-every: monthly          # every two weeks | monthly | never
 last-review: 2026-10-01
 away-reminder: scheduled task   # scheduled task | next session only

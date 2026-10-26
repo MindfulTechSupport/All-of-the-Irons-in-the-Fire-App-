@@ -5,6 +5,36 @@ Each version lists what changed and why, newest first.
 
 ---
 
+## 0.9.0 — 2026-10-26
+
+**Theme: take care of the brain.** Fast-thinking, busy brains can run for hours and forget water, food, the bathroom, or moving, or hit a wall when something feels too big. This version looks after the person, not just the project. Everything is offered as a question, never switched on by itself.
+
+### New (`brain-care` skill)
+- **Break check-in with "I'll hold that thought."** After a long stretch on one iron: "Want a quick break? Tell me what's on your mind first and I'll hold it." When you're back, it hands the thought right back.
+- **Small things for the break**, from what you like: a few sips of water, a snack that keeps your energy steady (like a piece of fruit), stand up and stretch, rest your eyes, three slow breaths, fresh air, and yes, the bathroom you've been putting off. Never preachy; candy bars are still your call. Not medical advice.
+- **Crunch-time mode:** if you need to push through, it just asks for a few sips and a ten-second stand.
+- **Energy check:** "How's your energy today: low, medium, or high?" Tasks get sized to match, and a low-energy rest day counts as progress.
+- **Tiny-step mode:** when something feels too big, one step of two minutes or less, then the next.
+- **Body doubling:** "Stay with me while I work." It keeps you company and checks in lightly.
+- **Done list:** everything you finish is recorded, by iron. "What did I get done?" shows it. It will feed the weekly recap later.
+- **What's calling you today?** Pick by interest and energy, not guilt.
+
+### Also new
+- **The desk list comes first.** At a screen, the whole desk list shows right after the greeting until it's done or you say "not now."
+- **Crossed off, not erased.** Finished desk-list items stay on the list with a line through them and a running count ("2 of 4 done"). Out loud, it says "two down, two to go."
+- **People tasks** on the desk list: who to talk to, what to ask, and a draft message you can send yourself.
+- **"Which of these sound like you?"** An optional setup question (founder, side hustler, ADHD brain, job and family, dreamer, creator, on the move, freelancer, small business owner, job hunting, caregiver, limited energy or burnout recovery, next chapter, volunteer, student). It decides which helpers to offer; it's never a label.
+- **Talk it out:** adding a new iron starts with "Tell me everything about it, ramble away."
+- **Quiet hours:** no nudges or check-ins during the times you protect.
+- **Phone or computer?** It asks when it matters, and reminds you that chats carry over to the Claude app on your phone.
+
+### Changed
+- New principles: ask before doing; use neutral, inclusive language and the user's own words for the people in their life.
+- Privacy note and disclosure now mention the done list and, only if you share them, how you describe yourself and your energy.
+- Map fields added: `who-i-am`, `quiet-hours`, `brain-care`, `done-list`, and `done` on desk-list items.
+
+---
+
 ## 0.8.1 — 2026-10-26
 
 **Theme: help when you need it.** Prompted by a Claude notification Ed saw while driving and couldn't read before it disappeared.
