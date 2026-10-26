@@ -23,6 +23,10 @@ nudge-time: "08:30"              # daily nudge time, or none
 nudge-days: weekdays             # every day | weekdays | custom list
 nudge-task: "Irons in the Fire: daily nudge"
 last-nudged: 2026-10-26 08:30
+voice-style: off               # on = always talk in voice-friendly style
+update-checked: 2026-10-26      # last time we checked GitHub for a newer version
+later-list:                     # saved while driving or on a phone, for when there's a screen
+  - Set up the hang gliding Project
 review-every: monthly          # every two weeks | monthly | never
 last-review: 2026-10-01
 away-reminder: scheduled task   # scheduled task | next session only

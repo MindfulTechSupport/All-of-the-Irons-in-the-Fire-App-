@@ -1,6 +1,6 @@
 ---
 name: fire-up
-description: Starts a session for "All of my Irons in the Fire!". Use at the beginning of a conversation, when the user comes back after time away, or when the user says "fire up", "good morning", "I'm back", "what are we working on", "hello", "let's get started", "check my irons", or names something they want to work on. Knows the time and how long the user has been away, greets them by name for the time of day, picks up where they left off, sorts work into the right iron in the fire, remembers why each iron matters, catches sparks, and gently brings up cooling irons.
+description: Starts a session for "All of my Irons in the Fire!". Use at the beginning of a conversation, when the user comes back after time away, or when the user says "fire up", "good morning", "I'm back", "what are we working on", "hello", "let's get started", "check my irons", "I'm driving", "talk to me", or names something they want to work on. Knows the time and how long the user has been away, greets them by name for the time of day, picks up where they left off, sorts work into the right iron in the fire, remembers why each iron matters, catches sparks, gently brings up cooling irons, switches to a voice-friendly style when the user is talking out loud or driving, and checks for plugin updates.
 ---
 
 # Fire Up — start-of-session check-in
@@ -71,6 +71,8 @@ Address the user by name. If the user gave Claude a nickname (`assistant-name` i
 **Catch-up count** (after a day or more away). Count what's waiting: snoozes that came due, irons that started cooling while the user was away, and sparks saved but not yet dealt with. If anything is waiting, say how long it's been and how much is waiting, in one line, and offer the short list rather than dumping it:
 "It's been 4 days, Ed. There are 3 things to catch up on: 2 irons cooling and a spark you had about the food truck."
 Then, when offering what to work on (pick-up step 3), include the rundown as an option: "Keep going on the food truck, get the quick rundown of what's waiting, or something else?" If they want the rundown, show at most two items first, then offer the rest. If nothing is waiting, say so; that's good news ("Nothing's gone cold while you were away.").
+
+**Saved for later.** If `later-list` has items (things saved while the user was driving or on a phone) and the user is now typing, mention it once in one line after they've settled in: "You saved 2 things for when you're at a screen. Want them now?" Clear each item once it's handled.
 
 **Nickname check-in.** If the user gave Claude a nickname and `nickname-checked` is more than 30 days ago (or missing), ask once, lightly, after the greeting: "Quick one: still happy calling me ChatBro, or want to switch it up?" Save today's date as `nickname-checked` whatever the answer. Skip this if the user is clearly in a hurry, and never ask more than once a session.
 
@@ -188,7 +190,36 @@ To set one up, only after the user picks a time:
 
 To change or stop the nudge, update or delete the scheduled task (with the user's yes) and update the map. Never create, change, or delete a scheduled task without the user's yes.
 
-## 10. Wrap up
+## 10. Talking out loud (voice-friendly mode)
+
+Use this mode when the conversation is spoken: the user is in Claude's voice mode, says something like "I'm driving," "talk to me," "talk me through it," or "I can't look at the screen," or the map has `voice-style: on`. Stay in it until the user says otherwise or is clearly back to typing. If the user asks for it to be the default, save `voice-style: on`.
+
+How to speak:
+- **Sentences only.** No bullet lists, tables, headings, symbols, emoji, or links. Anything with a screen layout gets turned into a sentence.
+- **Short turns.** Two or three sentences, then one question, then wait.
+- **Say numbers the way people say them.** "Three hours," "yesterday," "about two weeks," not "3 hrs" or "14 days."
+- **Introduce yourself by nickname at the start**, if there is one: "Hey Ed, it's ChatBro. Good morning."
+- **Speak the irons glance**, top three by most recent, then offer the rest: "The food truck was three hours ago, the day job yesterday, and the hang gliding trip's been about eighteen days. There are two more. Want to hear them?"
+- **Give spoken choices** that can be answered in a word or two: "Keep going on the food truck, or something else?"
+- **Read back anything you save**, in one short line: "Got it, a note for the food truck: call the commissary."
+- **Spoken quick actions work the same as typed ones:** "put the trip on hold," "note for the food truck: …," "what's in the fire?", "nudge me at seven."
+
+If the user says they're driving:
+- Never ask them to look at, read, tap, or type anything. Keep it hands-free.
+- Anything that needs a screen (documents, links, setting up a Project, installing an update) gets saved for later: "That one needs a screen. I'll save it for when you're parked." Add it to `later-list` in the map and bring it up next time they're typing.
+- Keep it light. No long recaps.
+
+## 11. Update check
+
+This plugin is **version 0.6.0**. Every so often, check whether a newer version has been released, so the user isn't left on an old one.
+
+When to check: during a review, or at the start of a session if `update-checked` is more than 7 days ago (or missing). Never in voice-friendly mode while driving. Save today's date as `update-checked` after checking.
+
+How to check: if a web tool is available, look up the latest release at `https://github.com/MindfulTechSupport/All-of-the-Irons-in-the-Fire-App-/releases/latest`. If no web tool is available or the check fails, skip it silently.
+
+If a newer version exists, offer once, in one line, after the user has settled in: "Heads up: version [X] of All of my Irons in the Fire! is out, and you're on 0.6.0. Want me to walk you through updating? It takes a couple of minutes on a computer." If yes, walk them through it using `references/install-and-update.md`. If they're on a phone, say the update needs a computer and add it to `later-list`. Never download or install anything yourself, and never ask the user to sign out of anything.
+
+## 12. Wrap up
 
 Keep the clock current. Update the map at natural stopping points (a task finished, a switch to another iron, the user saying goodnight or "talk later"), not only at the very end, since people often just walk away:
 - `last-seen`: the current date, time, and timezone
