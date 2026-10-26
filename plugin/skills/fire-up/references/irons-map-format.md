@@ -26,8 +26,16 @@ last-nudged: 2026-10-26 08:30
 voice-style: off               # on = always talk in voice-friendly style
 update-checked: 2026-10-26      # last time we offered (or ran) the update check
 support-mentioned: yes          # the one-time Patreon mention has been shown
-later-list:                     # saved while driving or on a phone, for when there's a screen
-  - Set up the hang gliding Project
+consent: yes 2026-10-26          # agreed to the disclosure; re-asked about every 90 days
+storage: memory                 # memory | file
+nudge-delivery: notification, email   # notification | email | both | text (via a connected service)
+desk-list:                      # screen-only tasks across all irons (see the at-my-desk skill)
+  - task: Set up the hang gliding Project
+    iron: Hang Gliding Trip
+    steps: Open claude.ai → Projects → New project; name it "Hang Gliding Trip"; paste the instructions Claude drafted
+    minutes: 5
+    priority: normal
+    added: 2026-10-26
 review-every: monthly          # every two weeks | monthly | never
 last-review: 2026-10-01
 away-reminder: scheduled task   # scheduled task | next session only
@@ -74,6 +82,7 @@ away-reminder: scheduled task   # scheduled task | next session only
 ```
 
 Field notes:
+- `later-list` (0.6.0–0.7.0) is replaced by `desk-list`. Move any items over and add steps and minutes.
 - `last-seen` replaces the 0.1.0/0.2.0 `last-check-in` (date only). If a map has `last-check-in` and no `last-seen`, read it as that date at noon and write `last-seen` from then on.
 - `last-touched` is a date and time (local), so the irons glance can show hours for anything under a day. An older date-only value is read as noon that day.
 - `timezone` is an IANA name (America/Chicago). Update it if the user says they've moved or are traveling.
