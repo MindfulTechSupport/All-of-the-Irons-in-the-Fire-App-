@@ -2,6 +2,7 @@
 #
 # How to release a new version (for example 0.3.0):
 #   1. Update plugin/ and set "version": "0.3.0" in plugin/.claude-plugin/plugin.json
+#      and in the "This plugin is version …" line of plugin/skills/fire-up/SKILL.md
 #   2. Add a "## 0.3.0 — YYYY-MM-DD" section to the top of CHANGELOG.md
 #   3. Add releases/v0.3.0/ with all-my-irons-in-the-fire-v0.3.0.plugin
 #      (plus README-v0.3.0.md and any other versioned snapshots)
@@ -86,7 +87,11 @@ jobs:
             {
               echo
               echo "### Install"
-              echo "Download \`$(basename "$plugin")\` below. In Claude, open **Customize → Plugins**, upload it, then start a chat and say **\"fire up.\"**"
+              echo "**On a computer** (the Claude phone app can't install plugins from a file):"
+              echo "1. Download \`$(basename "$plugin")\` below."
+              echo "2. Open the Claude desktop app or claude.ai, then **Customize → Plugins**."
+              echo "3. Remove the older version if it's listed, then upload the new file."
+              echo "4. Start a new chat and say **\"fire up.\"**"
             } >> notes.md
 
             latest_flag="--latest=false"

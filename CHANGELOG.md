@@ -5,6 +5,30 @@ Each version lists what changed and why, newest first.
 
 ---
 
+## 0.6.0 — 2026-10-26
+
+**Theme: talk to me, and keep me current.** Built from the car: the plugin should work out loud and hands-free, and nobody should get stuck on an old version because installing was confusing.
+
+### New
+- **Voice-friendly mode.** In Claude's voice mode, or when you say "I'm driving," "talk to me," or "talk me through it," the plugin speaks in short, plain sentences: no lists or symbols, numbers said the way people say them, one question at a time. It introduces itself by nickname ("Hey Ed, it's ChatBro. Good morning."), speaks the irons glance as a sentence, and reads back anything it saves. You can make it the default.
+- **Hands-free while driving.** It never asks you to look, tap, or type. Anything that needs a screen is saved to a new **later list** and brought up next time you're typing: "You saved 2 things for when you're at a screen."
+- **Update check.** About once a week (and during reviews), the plugin checks GitHub for a newer version and offers, in one line, to walk you through updating. It never installs anything itself or asks you to sign out of anything.
+- **Install and update guide**, built into the plugin and in the README: step by step, including "this needs a computer; the phone app can't install plugins from a file."
+
+### Changed
+- Release pages now carry full computer-based install steps.
+- Reviews include the update check.
+- Map fields added: `voice-style`, `update-checked`, `later-list`.
+
+### Honest limits
+- Claude's voice mode is started by the user; the plugin can't speak first, and the daily nudge is still a written notification.
+- Anthropic's documentation doesn't say whether plugins are active in voice mode. Version 0.6.0 is ready for it; the first real test is opening voice mode on a phone and saying "fire up."
+
+### Coming in 0.7.0
+- The GitHub repository becomes a plugin marketplace, so updates can come straight from the repo after a one-time setup.
+
+---
+
 ## 0.5.0 — 2026-10-26
 
 **Theme: an easy way back in.** Coming back to a conversation is easier when someone offers to remind you where you were, then lets you choose where to go next.

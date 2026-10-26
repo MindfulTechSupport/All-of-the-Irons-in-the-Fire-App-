@@ -1,7 +1,7 @@
 # All of my Irons in the Fire!
 *A Claude plugin by Mindful Tech Projects*
 
-**Current version: 0.5.0** · [Change summary](CHANGELOG.md) · [All releases](releases/)
+**Current version: 0.6.0** · [Change summary](CHANGELOG.md) · [All releases](releases/)
 
 ## What it does
 
@@ -12,6 +12,8 @@ All of my Irons in the Fire! helps people keep every iron in the fire glowing: t
 - **It keeps time with you.** It knows what time it is and how long you've been away, so you get "Good morning, Ed. Hope you got some rest," not a cold start.
 - **It picks up where you left off.** "Last time we were on the food truck. Want a quick summary of what we were talking about?" Then: "Keep going on the food truck, or work on something else?"
 - **It asks a question to get you going.** "How are you doing this afternoon, Ed?" or "What's on your mind?"
+- **It talks like a person when you're talking out loud.** In Claude's voice mode, or when you say "I'm driving," it speaks in short, plain sentences, one question at a time, hands-free. Anything that needs a screen is saved for later.
+- **It keeps itself up to date.** About once a week it checks for a new version and offers to walk you through updating.
 - **It shows all your irons at a glance**, with how long since each one was touched: "Food Truck: 3 hrs, Hang Gliding Trip: 18 days." Spot one you've missed, and jump in or put it on hold.
 - **It tells you what's waiting.** Back after a few days? "It's been 4 days, Ed. There are 3 things to catch up on."
 - **It can nudge you at a time you pick**, like 8:30 on weekday mornings, even when you haven't opened Claude.
@@ -39,15 +41,22 @@ All of my Irons in the Fire! helps people keep every iron in the fire glowing: t
 
 ## Install
 
-1. Download the latest `.plugin` file from [Releases](../../releases) (currently `all-my-irons-in-the-fire-v0.5.0.plugin`).
-2. In Claude, open **Customize → Plugins** and upload it.
-3. Start a chat and say **"fire up."**
+**You'll need a computer for this.** Plugins are added in Claude on the web (claude.ai) or the Claude desktop app; the Claude phone app can't install a plugin from a file. Once installed, it's on your Claude account.
+
+1. On your computer, open [the latest release](../../releases/latest) and download the file ending in `.plugin` (currently `all-my-irons-in-the-fire-v0.6.0.plugin`).
+2. Open the Claude desktop app or claude.ai and go to **Customize → Plugins** in the left sidebar.
+3. Upload the file.
+4. Start a new chat and say **"fire up."** The greeting should match the time of day.
+
+### Updating
+
+The plugin checks for new versions about once a week and offers to walk you through updating. To update by hand: download the new `.plugin` file, go to **Customize → Plugins**, remove the old version, and upload the new one. Your irons map is kept separately, so nothing is lost.
 
 ## Skills
 
 | Skill | What it's for |
 |---|---|
-| `fire-up` | Clock and time-of-day greeting, quick summary and continue-or-switch, sorting, learning, whys, spark catching, new and cooling irons, catch-up count, nickname check-in, first-time setup and daily-nudge setup |
+| `fire-up` | Clock and time-of-day greeting, quick summary and continue-or-switch, sorting, learning, whys, spark catching, new and cooling irons, catch-up count, nickname check-in, first-time setup and daily-nudge setup, voice-friendly mode, update check |
 | `daily-nudge` | The optional daily nudge at a time you choose: what's waiting, in a few warm lines |
 | `irons-review` | Look at everything; add, rename, merge, rest, archive, revive; update whys |
 | `give-it-a-forge` | Turn a hot iron into its own Claude Project |
@@ -65,6 +74,7 @@ releases/        Frozen copies of every version, version number in each file nam
   v0.3.0/
   v0.4.0/
   v0.5.0/
+  v0.6.0/
 ```
 
 ## Versioning
