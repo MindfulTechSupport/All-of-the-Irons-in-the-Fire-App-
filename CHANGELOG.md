@@ -5,6 +5,18 @@ Each version lists what changed and why, newest first.
 
 ---
 
+## Repository housekeeping — 2026-10-26
+
+No change to the plugin itself.
+
+- Organized the repository: `plugin/` holds the readable source, `releases/` holds frozen, version-named copies of every release.
+- `README.md` restored to its standard name so GitHub shows it on the front page; it now states the current version, install steps, layout, and versioning rules.
+- Versioned snapshots: `README-v0.1.0.md`, `README-v0.2.0.md`, `design-notes-v0.2.0.md`, and `all-my-irons-in-the-fire-vX.Y.Z.plugin`.
+- Added `LICENSE` (all rights reserved while in early development) and `.gitignore`.
+- Added standard version tags `v0.1.0` and `v0.2.0` with matching GitHub Releases.
+
+---
+
 ## 0.2.0 — 2026-10-25
 
 **Theme: motivation and sparks.** An iron only stays hot with a reason behind it, and a wandering mind is often bringing a good idea at an inconvenient time.
