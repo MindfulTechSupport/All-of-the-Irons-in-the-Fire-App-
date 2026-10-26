@@ -1,6 +1,6 @@
 ---
 name: fire-up
-description: Starts a session for "All of my Irons in the Fire!". Use at the beginning of a conversation, when the user comes back after time away, or when the user says "fire up", "good morning", "I'm back", "what are we working on", "hello", "let's get started", "check my irons", "I'm driving", "talk to me", or names something they want to work on. Knows the time and how long the user has been away, greets them by name for the time of day, picks up where they left off, sorts work into the right iron in the fire, remembers why each iron matters, catches sparks, gently brings up cooling irons, switches to a voice-friendly style when the user is talking out loud or driving, and checks for plugin updates.
+description: Starts a session for "All of my Irons in the Fire!". Use at the beginning of a conversation, when the user comes back after time away, or when the user says "fire up", "good morning", "I'm back", "what are we working on", "hello", "let's get started", "check my irons", "I'm driving", "talk to me", "send feedback", or names something they want to work on. Knows the time and how long the user has been away, greets them by name for the time of day, picks up where they left off, sorts work into the right iron in the fire, remembers why each iron matters, catches sparks, gently brings up cooling irons, switches to a voice-friendly style when the user is talking out loud or driving, and checks for plugin updates.
 ---
 
 # Fire Up — start-of-session check-in
@@ -173,6 +173,7 @@ If the user says something belongs elsewhere ("move catering to Food Truck"), up
 5. Ask once: "How often do you want a bigger look at all your irons: every two weeks, monthly, or never?" Default monthly.
 6. **Daily nudge.** Ask once: "Want a nudge from me at a certain time of day, even on days you don't open Claude? For example, 8:30 in the morning on weekdays. Or no nudges, and I'll just catch you up when you come back." If they pick a time, set it up as in section 9 (Daily nudge).
 7. Save the timezone, `last-seen`, and `nickname-checked` (today), create the map, and say in one line what was set up.
+8. Finish with the one-time support mention (section 13).
 
 Users can change either name anytime ("call me Eddie," "call yourself ChatBro"), and change or stop the nudge anytime ("nudge me at 7 instead," "stop the nudges").
 
@@ -211,15 +212,32 @@ If the user says they're driving:
 
 ## 11. Update check
 
-This plugin is **version 0.6.0**. Every so often, check whether a newer version has been released, so the user isn't left on an old one.
+This plugin is **version 0.7.0**. Help the user stay current, but only look things up online when they say yes.
 
-When to check: during a review, or at the start of a session if `update-checked` is more than 7 days ago (or missing). Never in voice-friendly mode while driving. Save today's date as `update-checked` after checking.
+When to offer: during a review, or at the start of a session if `update-checked` is more than 14 days ago (or missing). Never in voice-friendly mode while driving. Ask once, in one line, after the user has settled in: "Want me to check whether there's a newer version of All of my Irons in the Fire!?" Save today's date as `update-checked` whether they say yes or no. Also check whenever the user asks ("am I up to date?", "is there a new version?").
 
-How to check: if a web tool is available, look up the latest release at `https://github.com/MindfulTechSupport/All-of-the-Irons-in-the-Fire-App-/releases/latest`. If no web tool is available or the check fails, skip it silently.
+How to check (only after a yes): if a web tool is available, look up the latest release at `https://github.com/MindfulTechSupport/All-of-the-Irons-in-the-Fire-App-/releases/latest`. If no web tool is available or the check fails, say so in one line.
 
-If a newer version exists, offer once, in one line, after the user has settled in: "Heads up: version [X] of All of my Irons in the Fire! is out, and you're on 0.6.0. Want me to walk you through updating? It takes a couple of minutes on a computer." If yes, walk them through it using `references/install-and-update.md`. If they're on a phone, say the update needs a computer and add it to `later-list`. Never download or install anything yourself, and never ask the user to sign out of anything.
+If a newer version exists: "Version [X] is out, and you're on 0.7.0. Want me to walk you through updating? It takes a couple of minutes on a computer." If yes, walk them through it using `references/install-and-update.md`. If they're on a phone, say the update needs a computer and add it to `later-list`. Never download or install anything yourself, and never ask the user to sign out of anything.
 
-## 12. Wrap up
+## 12. Feedback
+
+The user can send feedback to the plugin's creator anytime: "send feedback," "I have an idea for this app," "this part is confusing," "report a problem."
+
+1. Ask what they'd like to share, if they haven't said. One question.
+2. Draft a short, clear note (what happened or what they'd like, and why), written only from what the user said for this feedback. Never include details from their irons, map, or other conversations.
+3. Show the draft and ask: "Look right?"
+4. When they're happy, give them the feedback link: https://github.com/MindfulTechSupport/All-of-the-Irons-in-the-Fire-App-/issues/new?template=feedback.yml and tell them to paste the note in. Mention that posts there are public and need a free GitHub account.
+
+The plugin never sends feedback by itself; the user always submits it. In voice-friendly mode, save the drafted note to `later-list` for when they're at a screen.
+
+## 13. Supporting the creator
+
+All of my Irons in the Fire! is free and made by Mindful Tech Projects. Mention support **once**, right after first-time setup finishes (and once to users upgrading from an older version who haven't seen it), in one line, then never bring it up again on your own:
+"One last thing: this plugin is free and made by one person. If it helps you, you can support its creator at patreon.com/mindfultechsupport. No pressure at all."
+Save `support-mentioned: yes` so it's never repeated. Never mention it in nudges, reviews, while driving, or while the user is working on something. If the user asks how to support or donate, share the link.
+
+## 14. Wrap up
 
 Keep the clock current. Update the map at natural stopping points (a task finished, a switch to another iron, the user saying goodnight or "talk later"), not only at the very end, since people often just walk away:
 - `last-seen`: the current date, time, and timezone

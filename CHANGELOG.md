@@ -5,6 +5,28 @@ Each version lists what changed and why, newest first.
 
 ---
 
+## 0.7.0 — 2026-10-26
+
+**Theme: going public.** A home on the web, an easier way to install, a way for users to talk back, and a way to support the creator.
+
+### New
+- **Website.** A one-page site on GitHub Pages: what the plugin does, an example conversation, install steps, and highlighted **Download**, **Support on Patreon**, and **Send feedback** buttons. It's published from this repository's `docs/` folder.
+- **Plugin marketplace.** This repository is now a Claude plugin marketplace (`.claude-plugin/marketplace.json`). Add it once in Customize, or in Claude Code run `/plugin install all-my-irons-in-the-fire --marketplace MindfulTechSupport/All-of-the-Irons-in-the-Fire-App-`, instead of downloading files for every version.
+- **Send feedback.** Say "send feedback" and the plugin drafts a short note with you, shows it to you, and gives you the feedback form link. It never sends anything itself and never includes details from your irons.
+- **Feedback form** on GitHub (Issues → Feedback), with a few simple questions.
+- **Support the creator.** The plugin mentions Patreon (patreon.com/mindfultechsupport) **once**, right after setup, and never again unless you ask. The link is also on the website, the README, and the repository's **Sponsor** button.
+- **Privacy note** (PRIVACY.md): the plugin sends nothing to Mindful Tech Projects.
+- **"Try saying" examples** in the README.
+
+### Changed
+- **The update check now asks first.** Every couple of weeks (and during reviews) it offers to check for a new version and only looks online if you say yes, following Anthropic's directory policy that plugins shouldn't contact outside resources unless the user asks.
+- Install guide covers the marketplace and file options.
+
+### Before submitting to Anthropic's directory (not done yet)
+- Anthropic's directory policy says software must not persistently store conversation content to build user profiles or read Claude's memory. The irons map is kept in the user's memory today, so the map's storage approach needs a rethink before directory submission.
+
+---
+
 ## 0.6.0 — 2026-10-26
 
 **Theme: talk to me, and keep me current.** Built from the car: the plugin should work out loud and hands-free, and nobody should get stuck on an old version because installing was confusing.

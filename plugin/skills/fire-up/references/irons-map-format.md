@@ -24,7 +24,8 @@ nudge-days: weekdays             # every day | weekdays | custom list
 nudge-task: "Irons in the Fire: daily nudge"
 last-nudged: 2026-10-26 08:30
 voice-style: off               # on = always talk in voice-friendly style
-update-checked: 2026-10-26      # last time we checked GitHub for a newer version
+update-checked: 2026-10-26      # last time we offered (or ran) the update check
+support-mentioned: yes          # the one-time Patreon mention has been shown
 later-list:                     # saved while driving or on a phone, for when there's a screen
   - Set up the hang gliding Project
 review-every: monthly          # every two weeks | monthly | never

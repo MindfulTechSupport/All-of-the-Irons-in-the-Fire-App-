@@ -8,9 +8,16 @@ Use these steps to walk a user through installing or updating. Give one step at 
 - If the user is on a phone or driving, don't start. Say it needs a computer, and save "Update All of my Irons in the Fire!" to `later-list`.
 - Never ask the user to sign out of anything, share a password, or let anyone else into their account. Installing never needs that.
 
-## Steps
+## Easiest: add the marketplace (one time)
 
-1. **Download the plugin file.** On the computer, open https://github.com/MindfulTechSupport/All-of-the-Irons-in-the-Fire-App-/releases/latest and click the file ending in `.plugin` (for example `all-my-irons-in-the-fire-v0.6.0.plugin`). It saves to the Downloads folder.
+The plugin's GitHub repository is also a plugin marketplace. Adding it once means future versions can come from there instead of downloading files.
+
+- **Claude desktop app or claude.ai:** go to **Customize → Plugins**, choose to add a marketplace, and enter `MindfulTechSupport/All-of-the-Irons-in-the-Fire-App-`. Then install **all-my-irons-in-the-fire** from it. (Wording on that screen may vary by plan and app version; if adding a marketplace isn't offered, use the file steps below.)
+- **Claude Code:** run `/plugin install all-my-irons-in-the-fire --marketplace MindfulTechSupport/All-of-the-Irons-in-the-Fire-App-`
+
+## Or: install from a file
+
+1. **Download the plugin file.** On the computer, open https://github.com/MindfulTechSupport/All-of-the-Irons-in-the-Fire-App-/releases/latest and click the file ending in `.plugin` (for example `all-my-irons-in-the-fire-v0.7.0.plugin`). It saves to the Downloads folder.
 2. **Open Claude** on that computer: the desktop app or claude.ai in a browser.
 3. **Go to Customize, then Plugins**, in the left sidebar.
 4. **If an older version is listed, remove it first**, so there aren't two copies. Their irons map is kept in Claude's memory or their folder, not in the plugin, so nothing is lost.

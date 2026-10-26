@@ -1,0 +1,14 @@
+{
+  "name": "mindful-tech-projects",
+  "description": "Claude plugins by Mindful Tech Projects",
+  "owner": {
+    "name": "Mindful Tech Projects"
+  },
+  "plugins": [
+    {
+      "name": "all-my-irons-in-the-fire",
+      "source": "./plugin",
+      "description": "Keeps every iron in the fire glowing: learns your life, remembers why each iron matters, picks up where you left off, and helps you decide what to heat up, rest, or set aside."
+    }
+  ]
+}

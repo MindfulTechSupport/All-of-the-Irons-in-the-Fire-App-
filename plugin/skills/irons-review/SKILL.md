@@ -25,7 +25,7 @@ Load the Irons Map the same way the `fire-up` skill does (memory `/areas/irons-i
 5. Then: "Any new irons in the fire that aren't on here?" Add new irons the user names, and ask for their why.
 6. Then: "Anything here you're done with or out of energy for?" Pull out of the fire (archive) what they choose. Being out of energy is a fine reason; remind them it stays safe and ready for its next chance at some heat.
 7. If the user gave Claude a nickname and hasn't been asked in 30+ days, ask: "Still happy calling me [nickname]?" Also check the daily nudge: "Still want your nudge at [time], or change it?" Update the map (and the scheduled task, with a yes).
-8. Run the update check (see `fire-up`, "Update check") and mention a newer version in one line if there is one.
+8. Offer the update check (see `fire-up`, "Update check"): ask first, and look online only if the user says yes.
 9. Offer to promote any iron that is running hot (lots of activity, documents, collaborators) using `give-it-a-forge`.
 10. Update `last-review` and summarize the changes in one or two lines.
 

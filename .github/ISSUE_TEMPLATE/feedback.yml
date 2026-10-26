@@ -1,0 +1,32 @@
+name: Feedback
+description: Ideas, things that felt off, or what you love about All of my Irons in the Fire!
+title: "[Feedback] "
+labels: ["feedback"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping make All of my Irons in the Fire! better. Posts here are public, so please don't include anything private.
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of feedback is this?
+      options:
+        - Idea or feature request
+        - Something confusing or not working
+        - Something I love
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Your feedback
+      description: What happened or what you'd like, and why it matters to you.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Plugin version (if you know it)
+      placeholder: "0.7.0"
