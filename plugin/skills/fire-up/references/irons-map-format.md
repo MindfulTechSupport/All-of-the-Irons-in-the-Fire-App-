@@ -26,7 +26,7 @@ last-nudged: 2026-10-26 08:30
 voice-style: off               # on = always talk in voice-friendly style
 update-checked: 2026-10-26      # last time we offered (or ran) the update check
 support-mentioned: yes          # the one-time Patreon mention has been shown
-consent: yes 2026-10-26          # agreed to the disclosure; re-asked about every 90 days
+consent: yes 2026-10-26          # agreed to the disclosure; re-asked about every 30 days
 storage: memory                 # memory | file
 nudge-delivery: notification, email   # notification | email | both | text (via a connected service)
 desk-list:                      # screen-only tasks across all irons (see the at-my-desk skill)

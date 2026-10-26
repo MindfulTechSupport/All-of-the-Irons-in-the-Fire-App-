@@ -15,8 +15,10 @@ Each version lists what changed and why, newest first.
 - **Nudge delivery choices.** The daily nudge can arrive as a phone notification, an email, or both. Texting works through a service you've connected yourself (for example Zapier).
 - **Ask before remembering (new `my-data` skill).** At setup, the plugin explains in plain words what it will remember, where, and how to erase it, and asks permission before saving anything. Say no and it still helps you, without saving. Users upgrading from an older version see this once.
 - **"What do you know about me?"** Shows everything saved, in plain words, with an option to export a copy.
-- **"Forget everything."** Erases the whole irons map (after one clear confirmation and an offer to keep a copy), and offers to stop the daily nudge too. "Forget [one thing]" removes just that.
-- **90-day check-in:** "Still okay with me remembering your irons between chats?"
+- **"Forget everything."** Always offers an export file first, so you can keep your irons and come back later, then erases the whole irons map after one clear confirmation, and offers to stop the daily nudge too. "Forget [one thing]" removes just that.
+- **"Restore my irons."** Share your export file and pick up right where you left off.
+- **30-day check-in:** "Still okay with me remembering your irons between chats?"
+- **Feedback in your own words.** Say "send feedback to the developer" and just talk. The plugin asks a few clarifying questions, boils it down to what you're really asking for, checks it with you, and drafts the note for you to submit.
 
 ### Changed
 - `later-list` becomes `desk-list`, with steps, minutes, and priority per item. Older items move over automatically.

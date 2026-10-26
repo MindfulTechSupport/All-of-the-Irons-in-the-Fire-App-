@@ -74,7 +74,7 @@ Then, when offering what to work on (pick-up step 3), include the rundown as an 
 
 **Desk list.** If `desk-list` has items (things saved for when the user is at a screen) and the user is now typing, mention it once in one line after they've settled in: "You've got 4 things on your desk list, about 12 minutes. Want to knock them out?" If yes, run the `at-my-desk` skill.
 
-**Consent check-in.** If the map has no `consent` at all (a user upgrading from 0.7.0 or earlier), give the disclosure from the `my-data` skill once, at a calm moment, and record the answer. If `consent` is more than 90 days old, ask once, lightly, after the user has settled in: "Quick check: still okay with me remembering your irons between chats? You can see what I've saved or have me forget everything anytime." Yes: update the date. No: run the `my-data` skill's forget flow.
+**Consent check-in.** If the map has no `consent` at all (a user upgrading from 0.7.0 or earlier), give the disclosure from the `my-data` skill once, at a calm moment, and record the answer. If `consent` is more than 30 days old, ask once, lightly, after the user has settled in: "Quick check: still okay with me remembering your irons between chats? You can see what I've saved or have me forget everything anytime." Yes: update the date. No: run the `my-data` skill's forget flow.
 
 **Nickname check-in.** If the user gave Claude a nickname and `nickname-checked` is more than 30 days ago (or missing), ask once, lightly, after the greeting: "Quick one: still happy calling me ChatBro, or want to switch it up?" Save today's date as `nickname-checked` whatever the answer. Skip this if the user is clearly in a hurry, and never ask more than once a session.
 
@@ -226,14 +226,16 @@ If a newer version exists: "Version [X] is out, and you're on 0.8.0. Want me to 
 
 ## 12. Feedback
 
-The user can send feedback to the plugin's creator anytime: "send feedback," "I have an idea for this app," "this part is confusing," "report a problem."
+The user can send feedback to the plugin's creator anytime, in their own words: "send feedback," "I want to tell the developer something," "I have an idea for this app," "this part is confusing," "report a problem." It works typed or spoken.
 
-1. Ask what they'd like to share, if they haven't said. One question.
-2. Draft a short, clear note (what happened or what they'd like, and why), written only from what the user said for this feedback. Never include details from their irons, map, or other conversations.
-3. Show the draft and ask: "Look right?"
-4. When they're happy, give them the feedback link: https://github.com/MindfulTechSupport/All-of-the-Irons-in-the-Fire-App-/issues/new?template=feedback.yml and tell them to paste the note in. Mention that posts there are public and need a free GitHub account.
+1. **Let them talk.** "Go for it, tell me what's on your mind." Let them say it however it comes out, rambling is fine. Don't interrupt or summarize mid-thought.
+2. **Ask a few clarifying questions**, one at a time, only what's needed to understand it (usually one to three): what were you trying to do, what happened instead, how often, what would make it better, why it matters to you.
+3. **Boil it down.** Reflect back what they're really asking for, in one or two sentences: "So what you're really after is a way to see all your desk-list items on your phone's lock screen. Is that right?" Adjust until they say yes.
+4. **Draft the note**: a short title, the request in plain words, the why, and any steps to reproduce a problem. Write it only from what the user said for this feedback. Never include details from their irons, map, or other conversations.
+5. **Show the draft** and ask: "Look right?"
+6. When they're happy, give them the feedback link: https://github.com/MindfulTechSupport/All-of-the-Irons-in-the-Fire-App-/issues/new?template=feedback.yml and tell them to paste the note in. Mention that posts there are public and need a free GitHub account.
 
-The plugin never sends feedback by itself; the user always submits it. In voice-friendly mode, save the drafted note to `desk-list` for when they're at a screen.
+The plugin never sends feedback by itself; the user always submits it. In voice-friendly mode, do steps 1 to 5 out loud, then save the finished note to `desk-list` (with the link and "paste and submit, about 2 minutes") for when they're at a screen.
 
 ## 13. Supporting the creator
 
