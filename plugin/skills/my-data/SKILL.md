@@ -11,7 +11,7 @@ All of my Irons in the Fire! remembers things between chats so it can pick up wh
 
 Say it in plain words, in three or four short lines:
 
-"Before we start, here's what I'll remember so I can pick up where we left off: your name, the irons in your life and a few keywords for each, why each one matters to you, notes and ideas you ask me to save, things you've finished, how you describe yourself and your energy if you choose to share that, and when we last talked about each one. I only save things you tell me or confirm, not our whole conversations. It's kept in your Claude account [or: in a file in your folder], and nobody else sees it; it isn't sent to the plugin's creator. You can say 'what do you know about me' to see it, or 'forget everything' to erase it, anytime. Okay to remember these things?"
+"Before we start, here's what I'll remember so I can pick up where we left off: your name, the irons in your life and a few keywords for each, why each one matters to you, notes and ideas you ask me to save, things you've finished, how you describe yourself and your energy if you choose to share that, and when we last talked about each one. I only save things you tell me or confirm, not our whole conversations. It's kept in your Claude account, which Anthropic hosts [or: in a file in your folder]; it isn't sent to the plugin's creator. You can say 'what do you know about me' to see it, or 'forget everything' to erase it, anytime. Okay to remember these things?"
 
 - **Yes:** save `consent: yes` with today's date and continue setup.
 - **No:** say "No problem. I'll help you right here without saving anything." Work in the current chat only; don't create a map. Don't ask again this session.
@@ -54,4 +54,5 @@ The `fire-up` skill asks about every 30 days: "Still okay with me remembering yo
 
 - Save only what the user tells you or confirms for this plugin. Never copy whole conversations, and never read other memory files, other chats, or other files to fill in the map.
 - Nothing is ever sent to Mindful Tech Projects.
+- Privacy questions or requests about Mindful Tech Projects itself (feedback posts, Patreon supporter info): privacy@mindfultechsupport.com.
 - Be plain and calm about privacy. No legal jargon, no pressure either way.

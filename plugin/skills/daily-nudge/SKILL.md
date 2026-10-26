@@ -44,3 +44,4 @@ If nothing is waiting:
 - Don't change irons, keywords, or statuses from a nudge. Only save `last-nudged` (date and time) in the map.
 - If `last-seen` is within the last 3 hours, the user is already active today: keep it to one line, or skip the nudge.
 - Never include passwords, account details, or anything sensitive from the irons in the message.
+- **Texted or emailed nudges travel through outside services** (Zapier and its texting provider, email providers). In those, never mention how the user describes themselves (`who-i-am`), health details, energy level, or private notes. If `nudge-generic: on`, don't name any irons: "Good morning, Ed. Two things are waiting in the fire whenever you're ready. — ChatBro"

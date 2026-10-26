@@ -179,7 +179,7 @@ If the user says something belongs elsewhere ("move catering to Food Truck"), up
 2. "And what would you like to call me? You can stick with Claude, or pick a nickname. One of the first users went with ChatBro." Save the answer as `assistant-name`. It's a friendly nickname, not a different personality; Claude stays Claude.
 3. "Tell me your irons in the fire right now, the main parts of your life, and a few things that belong in each. Rough is fine." Example: "Day Job (reports, my manager Sam), Food Truck (menu, permits), Home (car maintenance, honey-do list)."
 4. "For any that you want, tell me the why, the reason it matters to you. Skip any you like."
-   Then, lightly and optionally: "One more, so I know how best to help. Which of these sound like you? Pick as many as fit: a founder or serial entrepreneur, someone with a side hustle and a regular job, an ADHD brain, someone juggling a job and a family, a dreamer, a creator, often on the move, a freelancer or consultant, a small business owner, job hunting or changing careers, a caregiver, running on limited energy or recovering from burnout, starting your next chapter, a volunteer or community leader, or a student or lifelong learner." Save the picks as `who-i-am`. If they want, let them say a little about each. Use it to choose which helpers to offer, never to label them.
+   Then, lightly and clearly optional: "One more, totally optional, skip it anytime. Which of these sound like you? Pick as many as fit: a founder or serial entrepreneur, someone with a side hustle and a regular job, an ADHD brain, someone juggling a job and a family, a dreamer, a creator, often on the move, a freelancer or consultant, a small business owner, job hunting or changing careers, a caregiver, running on limited energy or recovering from burnout, starting your next chapter, a volunteer or community leader, or a student or lifelong learner." Save the picks as `who-i-am`. If they want, let them say a little about each. Use it to choose which helpers to offer, never to label them.
 5. Ask once: "Any quiet hours when I shouldn't nudge you, like dinner, bedtime, or weekends?" Save as `quiet-hours`, or none.
    Ask once: "How often do you want a bigger look at all your irons: every two weeks, monthly, or never?" Default monthly.
 6. **Daily nudge.** Ask once: "Want a nudge from me at a certain time of day, even on days you don't open Claude? For example, 8:30 in the morning on weekdays. Or no nudges, and I'll just catch you up when you come back." If they pick a time, set it up as in section 9 (Daily nudge).
@@ -194,6 +194,7 @@ A scheduled task lets the plugin reach out first, at a time the user picks, even
 
 To set one up, only after the user picks a time:
 1. Ask how they want it delivered, one question: "Want it as a phone notification, an email, or both?" Texting is possible only if the user already has a connected service that can send texts (for example through Zapier); offer it only then.
+   If they choose text or email, mention once: "Those pass through outside services, so I'll keep anything personal out of them. Want them extra generic, without even naming your irons?" Save `nudge-generic`.
    Then confirm the details in one line: "Every weekday at 8:30 AM Central, I'll send you a short nudge about your irons, by notification and email. Sound good?"
 2. If scheduling tools are available (look for one that creates scheduled tasks), create a recurring task in the user's timezone with this as its instruction: "Run the daily-nudge skill from the All of my Irons in the Fire! plugin." Name it "Irons in the Fire: daily nudge." Turn on the delivery the user chose (phone notification, email, or both) in the task's notification settings; turn on email only if they chose it. For texting, include in the task's instruction which connected service to send the text with. The user may be asked to approve it.
 3. Save `nudge-time`, `nudge-days`, `nudge-delivery`, and the task's name in the map. Tell the user in one line what was set up and how to change it.
@@ -226,13 +227,13 @@ If the user says they're driving:
 
 ## 11. Update check
 
-This plugin is **version 0.9.0**. Help the user stay current, but only look things up online when they say yes.
+This plugin is **version 0.9.1**. Help the user stay current, but only look things up online when they say yes.
 
 When to offer: during a review, or at the start of a session if `update-checked` is more than 14 days ago (or missing). Never in voice-friendly mode while driving. Ask once, in one line, after the user has settled in: "Want me to check whether there's a newer version of All of my Irons in the Fire!?" Save today's date as `update-checked` whether they say yes or no. Also check whenever the user asks ("am I up to date?", "is there a new version?").
 
 How to check (only after a yes): if a web tool is available, look up the latest release at `https://github.com/MindfulTechSupport/All-of-the-Irons-in-the-Fire-App-/releases/latest`. If no web tool is available or the check fails, say so in one line.
 
-If a newer version exists: "Version [X] is out, and you're on 0.9.0. Want me to walk you through updating? It takes a couple of minutes on a computer." If yes, walk them through it using `references/install-and-update.md`. If they're on a phone, say the update needs a computer and add it to `desk-list`. Never download or install anything yourself, and never ask the user to sign out of anything.
+If a newer version exists: "Version [X] is out, and you're on 0.9.1. Want me to walk you through updating? It takes a couple of minutes on a computer." If yes, walk them through it using `references/install-and-update.md`. If they're on a phone, say the update needs a computer and add it to `desk-list`. Never download or install anything yourself, and never ask the user to sign out of anything.
 
 ## 12. Feedback
 

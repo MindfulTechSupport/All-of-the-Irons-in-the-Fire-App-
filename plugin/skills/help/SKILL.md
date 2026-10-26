@@ -62,11 +62,13 @@ If the plugin helps you set something up in your browser (like creating a Claude
 - **Remove everything:** "forget everything." You'll be offered an export file first.
 - **Come back later:** "restore my irons" and share your export file.
 - Nothing is sent to Mindful Tech Projects. See [PRIVACY.md](https://github.com/MindfulTechSupport/All-of-the-Irons-in-the-Fire-App-/blob/main/PRIVACY.md).
+- **Privacy questions or requests:** email privacy@mindfultechsupport.com (not a public GitHub issue).
 
 ## Nudges
 
 - **Not getting your daily nudge?** Check that the scheduled task is turned on and approved, and that notifications are allowed for the Claude app on your phone. Then say "check my daily nudge."
 - **Change it:** "nudge me at 7 instead," "email my nudge," "stop the nudges."
+- **Keep texts private:** "make my texts generic" and texted or emailed nudges won't name your irons.
 
 ## Voice and driving
 
