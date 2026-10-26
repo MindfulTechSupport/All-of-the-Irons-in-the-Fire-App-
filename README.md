@@ -1,7 +1,7 @@
 # All of my Irons in the Fire!
 *A Claude plugin by Mindful Tech Projects*
 
-**Current version: 0.9.0** · [Website](https://mindfultechsupport.github.io/All-of-the-Irons-in-the-Fire-App-/) · [Change summary](CHANGELOG.md) · [All releases](releases/)
+**Current version: 0.9.1** · [Website](https://mindfultechsupport.github.io/All-of-the-Irons-in-the-Fire-App-/) · [Change summary](CHANGELOG.md) · [All releases](releases/)
 
 **[❓ Help](HELP.md)** · **[💬 Send feedback](../../issues/new?template=feedback.yml)** · **[❤️ Support on Patreon](https://www.patreon.com/mindfultechsupport)**
 
@@ -61,7 +61,7 @@ This repository is a plugin marketplace. Add it once, and new versions can come 
 
 ### Option 2: install from a file
 
-1. Open [the latest release](../../releases/latest) and download the file ending in `.plugin` (currently `all-my-irons-in-the-fire-v0.9.0.plugin`).
+1. Open [the latest release](../../releases/latest) and download the file ending in `.plugin` (currently `all-my-irons-in-the-fire-v0.9.1.plugin`).
 2. In the Claude desktop app or claude.ai, go to **Customize → Plugins**.
 3. Remove an older version if it's listed, then upload the file.
 
@@ -92,7 +92,7 @@ All of my Irons in the Fire! is free and made by one person at Mindful Tech Proj
 
 - **Ideas, problems, or love notes:** [send feedback](../../issues/new?template=feedback.yml). You can also just say "send feedback" to the plugin, and it'll help you write it.
 - **If it helps you:** [support the creator on Patreon](https://www.patreon.com/mindfultechsupport). The plugin mentions this once after setup and never nags.
-- **Privacy:** the plugin sends nothing to Mindful Tech Projects. See [PRIVACY.md](PRIVACY.md).
+- **Privacy:** the plugin sends nothing to Mindful Tech Projects. See [PRIVACY.md](PRIVACY.md). Every version gets a privacy check before release ([privacy/](privacy/)). Privacy questions: privacy@mindfultechsupport.com.
 
 ## Skills
 
@@ -115,6 +115,7 @@ CHANGELOG.md     What changed in every version, newest first
 LICENSE          Usage terms
 HELP.md          Answers to common questions, including Claude's own notifications
 PRIVACY.md       What the plugin does (and doesn't do) with your information
+privacy/         A privacy check for every version
 .claude-plugin/  Marketplace catalog, so Claude can install the plugin from this repo
 docs/            The website (GitHub Pages)
 plugin/          The plugin's source files (current version)
@@ -129,6 +130,7 @@ releases/        Frozen copies of every version, version number in each file nam
   v0.8.0/
   v0.8.1/
   v0.9.0/
+  v0.9.1/
 ```
 
 ## Versioning

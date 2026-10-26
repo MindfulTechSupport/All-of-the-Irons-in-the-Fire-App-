@@ -5,6 +5,21 @@ Each version lists what changed and why, newest first.
 
 ---
 
+## 0.9.1 — 2026-10-26
+
+**Theme: privacy fixes from the first privacy check.** Every version now gets a privacy check before release (see `privacy/`). The v0.9.0 check found nothing that stopped the release, but nine small things to say more precisely or tighten. All are fixed here.
+
+### Changed
+- **Precise about hosting:** the privacy note now says your Claude account is hosted by Anthropic (with a link to Anthropic's privacy policy) and that Mindful Tech Projects never receives your information.
+- **Nudges that travel:** texted and emailed nudges pass through outside services (Zapier, its texting provider, email providers), so they now never include how you describe yourself, health details, energy, or private notes. New **"generic texts"** option: nudges that don't even name your irons. Setup mentions this when you choose text or email.
+- **Private privacy contact:** privacy questions and requests go to **privacy@mindfultechsupport.com**, not public GitHub issues.
+- **Website fonts:** the website no longer loads fonts from Google, so visitors' connection details aren't shared with Google. It now uses each device's own fonts and looks nearly the same.
+- **"Which of these sound like you?"** is now clearly marked optional ("skip it anytime").
+- **Privacy note additions:** adults only (not directed to children under 13, or under 16 in Europe); how Patreon supporter info is used (thanks and updates only, never sold or shared); the website uses no cookies, analytics, or outside fonts.
+- **Privacy checks folder:** `privacy/privacy-check-v0.9.0.md` (the first check) and `privacy/privacy-check-v0.9.1.md`.
+
+---
+
 ## 0.9.0 — 2026-10-26
 
 **Theme: take care of the brain.** Fast-thinking, busy brains can run for hours and forget water, food, the bathroom, or moving, or hit a wall when something feels too big. This version looks after the person, not just the project. Everything is offered as a question, never switched on by itself.

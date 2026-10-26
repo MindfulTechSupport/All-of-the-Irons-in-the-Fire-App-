@@ -29,6 +29,7 @@ support-mentioned: yes          # the one-time Patreon mention has been shown
 consent: yes 2026-10-26          # agreed to the disclosure; re-asked about every 30 days
 storage: memory                 # memory | file
 nudge-delivery: notification, email   # notification | email | both | text (via a connected service)
+nudge-generic: off              # on = texted/emailed nudges never name irons
 desk-list:                      # screen-only tasks across all irons (see the at-my-desk skill)
   - task: Set up the hang gliding Project
     iron: Hang Gliding Trip
