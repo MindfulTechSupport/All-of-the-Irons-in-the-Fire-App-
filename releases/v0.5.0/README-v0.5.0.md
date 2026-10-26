@@ -12,6 +12,7 @@ All of my Irons in the Fire! helps people keep every iron in the fire glowing: t
 - **It keeps time with you.** It knows what time it is and how long you've been away, so you get "Good morning, Ed. Hope you got some rest," not a cold start.
 - **It picks up where you left off.** "Last time we were on the food truck. Want a quick summary of what we were talking about?" Then: "Keep going on the food truck, or work on something else?"
 - **It asks a question to get you going.** "How are you doing this afternoon, Ed?" or "What's on your mind?"
+- **It shows all your irons at a glance**, with how long since each one was touched: "Food Truck: 3 hrs, Hang Gliding Trip: 18 days." Spot one you've missed, and jump in or put it on hold.
 - **It tells you what's waiting.** Back after a few days? "It's been 4 days, Ed. There are 3 things to catch up on."
 - **It can nudge you at a time you pick**, like 8:30 on weekday mornings, even when you haven't opened Claude.
 - **You can give Claude a nickname.** ChatBro, anyone? It checks in now and then to make sure the name still fits.

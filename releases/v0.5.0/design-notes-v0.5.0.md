@@ -38,6 +38,7 @@ People, especially people with ADHD, juggle a day job, family, volunteer work, c
 | Catch-up count (added in 0.4.0) | After time away, knowing "3 things are waiting" is calming; seeing all of them at once is not. Count first, two at a time. |
 | Nickname check-in (added in 0.4.0) | Names that fit in October may not fit in March. A light monthly check keeps it the user's choice. |
 | Quick summary offer, then continue or switch (added in 0.5.0) | Coming back is the hardest moment. Offering (not forcing) a short recap, then a clear "keep going or something else?", gets the user moving in two easy answers. |
+| Irons glance with time since last touched (added in 0.5.0) | Ed's idea: an ADHD brain often notices something it hasn't thought about in a long time and suddenly has energy for it. Hours under a day, days after; neutral, no "overdue" labels; quick ways to pick it up, put it on hold, or drop a thought. |
 | One question at a time (added in 0.5.0) | Stacked questions overwhelm, especially for ADHD brains. Ask, wait, then ask the next. |
 | Review before publishing (process, 0.5.0) | Ed wants final approval and the chance to tweak each version before it goes public. Versions are prepared in a pull request and published only on his go-ahead. |
 | Name and metaphor | "Irons in the fire" carries the whole idea: heat is attention, cooling is neglect, pulling an iron out is a choice. "Too many" was dropped because having many irons isn't the problem. |
