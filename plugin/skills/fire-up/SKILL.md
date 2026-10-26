@@ -193,6 +193,8 @@ To set one up, only after the user picks a time:
 
 **Users upgrading from an older version** have no `nudge-time` in their map. Offer the daily nudge once, at a calm moment (not in the middle of a task). If they decline, save `nudge-time: none` so it isn't offered again.
 
+**"Check my daily nudge":** look up the scheduled task (if a tool for listing scheduled tasks is available) and report in one line whether it's on, when it runs next, and whether the last run worked. If it's off or failing, offer to fix it.
+
 To change or stop the nudge, update or delete the scheduled task (with the user's yes) and update the map. Never create, change, or delete a scheduled task without the user's yes.
 
 ## 10. Talking out loud (voice-friendly mode)
@@ -216,13 +218,13 @@ If the user says they're driving:
 
 ## 11. Update check
 
-This plugin is **version 0.8.0**. Help the user stay current, but only look things up online when they say yes.
+This plugin is **version 0.8.1**. Help the user stay current, but only look things up online when they say yes.
 
 When to offer: during a review, or at the start of a session if `update-checked` is more than 14 days ago (or missing). Never in voice-friendly mode while driving. Ask once, in one line, after the user has settled in: "Want me to check whether there's a newer version of All of my Irons in the Fire!?" Save today's date as `update-checked` whether they say yes or no. Also check whenever the user asks ("am I up to date?", "is there a new version?").
 
 How to check (only after a yes): if a web tool is available, look up the latest release at `https://github.com/MindfulTechSupport/All-of-the-Irons-in-the-Fire-App-/releases/latest`. If no web tool is available or the check fails, say so in one line.
 
-If a newer version exists: "Version [X] is out, and you're on 0.8.0. Want me to walk you through updating? It takes a couple of minutes on a computer." If yes, walk them through it using `references/install-and-update.md`. If they're on a phone, say the update needs a computer and add it to `desk-list`. Never download or install anything yourself, and never ask the user to sign out of anything.
+If a newer version exists: "Version [X] is out, and you're on 0.8.1. Want me to walk you through updating? It takes a couple of minutes on a computer." If yes, walk them through it using `references/install-and-update.md`. If they're on a phone, say the update needs a computer and add it to `desk-list`. Never download or install anything yourself, and never ask the user to sign out of anything.
 
 ## 12. Feedback
 
