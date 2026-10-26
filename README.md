@@ -1,7 +1,7 @@
 # All of my Irons in the Fire!
 *A Claude plugin by Mindful Tech Projects*
 
-**Current version: 0.4.0** · [Change summary](CHANGELOG.md) · [All releases](releases/)
+**Current version: 0.5.0** · [Change summary](CHANGELOG.md) · [All releases](releases/)
 
 ## What it does
 
@@ -10,7 +10,7 @@ All of my Irons in the Fire! helps people keep every iron in the fire glowing: t
 ## How it feels to use
 
 - **It keeps time with you.** It knows what time it is and how long you've been away, so you get "Good morning, Ed. Hope you got some rest," not a cold start.
-- **It picks up where you left off.** "Last time we were on the food truck menu. Want to pick that back up?"
+- **It picks up where you left off.** "Last time we were on the food truck. Want a quick summary of what we were talking about?" Then: "Keep going on the food truck, or work on something else?"
 - **It asks a question to get you going.** "How are you doing this afternoon, Ed?" or "What's on your mind?"
 - **It tells you what's waiting.** Back after a few days? "It's been 4 days, Ed. There are 3 things to catch up on."
 - **It can nudge you at a time you pick**, like 8:30 on weekday mornings, even when you haven't opened Claude.
@@ -38,7 +38,7 @@ All of my Irons in the Fire! helps people keep every iron in the fire glowing: t
 
 ## Install
 
-1. Download the latest `.plugin` file from [Releases](../../releases) (currently `all-my-irons-in-the-fire-v0.4.0.plugin`).
+1. Download the latest `.plugin` file from [Releases](../../releases) (currently `all-my-irons-in-the-fire-v0.5.0.plugin`).
 2. In Claude, open **Customize → Plugins** and upload it.
 3. Start a chat and say **"fire up."**
 
@@ -46,7 +46,7 @@ All of my Irons in the Fire! helps people keep every iron in the fire glowing: t
 
 | Skill | What it's for |
 |---|---|
-| `fire-up` | Clock and time-of-day greeting, picking up where you left off, sorting, learning, whys, spark catching, new and cooling irons, catch-up count, nickname check-in, first-time setup and daily-nudge setup |
+| `fire-up` | Clock and time-of-day greeting, quick summary and continue-or-switch, sorting, learning, whys, spark catching, new and cooling irons, catch-up count, nickname check-in, first-time setup and daily-nudge setup |
 | `daily-nudge` | The optional daily nudge at a time you choose: what's waiting, in a few warm lines |
 | `irons-review` | Look at everything; add, rename, merge, rest, archive, revive; update whys |
 | `give-it-a-forge` | Turn a hot iron into its own Claude Project |
@@ -63,13 +63,18 @@ releases/        Frozen copies of every version, version number in each file nam
   v0.2.0/
   v0.3.0/
   v0.4.0/
+  v0.5.0/
 ```
 
 ## Versioning
 
 Versions follow [Semantic Versioning](https://semver.org): `MAJOR.MINOR.PATCH`. Each release gets a git tag (`v0.2.0`), a GitHub Release with notes and the downloadable plugin, an entry in CHANGELOG.md, and a folder in `releases/` with versioned copies of the plugin, README, and design notes.
 
-Releases are published automatically by the [Publish releases](.github/workflows/release.yml) workflow. To ship a new version: update `plugin/` and its version number, add the version's section to CHANGELOG.md, add a `releases/vX.Y.Z/` folder with the versioned files, and push to `main`. GitHub creates the tag and Release page on its own.
+Every version goes through review before it's published:
+
+1. **Prepare** on a `release/vX.Y.Z` branch: update `plugin/` and its version number, add the version's section to CHANGELOG.md, and add a `releases/vX.Y.Z/` folder with the versioned files.
+2. **Review** in a pull request. The owner reviews the changes and can request or make tweaks; nothing is public yet.
+3. **Publish** only after the owner approves: the pull request is merged into `main`, and the [Publish releases](.github/workflows/release.yml) workflow creates the tag and Release page automatically.
 
 ## Where your map lives
 

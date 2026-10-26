@@ -13,6 +13,10 @@ last-session:
   iron: Food Truck
   left-off: deciding the breakfast taco lineup for the farmers market
   next: pick two tacos and price them
+  summary:
+    - Farmers market is Saturdays, 7 AM to noon; booth fee is paid
+    - Leaning toward chorizo-and-egg plus a veggie option
+    - Still open: pricing, and whether to offer coffee
 last-opener: "What's on your mind?"
 nickname-checked: 2026-10-26     # last time we asked if the nickname still fits (every ~30 days)
 nudge-time: "08:30"              # daily nudge time, or none
@@ -67,7 +71,7 @@ away-reminder: scheduled task   # scheduled task | next session only
 Field notes:
 - `last-seen` replaces the 0.1.0/0.2.0 `last-check-in` (date only). If a map has `last-check-in` and no `last-seen`, read it as that date at noon and write `last-seen` from then on.
 - `timezone` is an IANA name (America/Chicago). Update it if the user says they've moved or are traveling.
-- `last-session` is one short snapshot, overwritten each time. It's for picking up, not a history.
+- `last-session` is one short snapshot, overwritten each time. It's for picking up, not a history. `summary` is 2 to 4 lines, written in plain words the user would recognize.
 - `why` is the user's own words for why the iron matters. Use it when an iron is cooling. Leave it blank if they skip it.
 - `sparks` are ideas the user had while working on a different iron. Bring them up next time this iron is worked on, then clear the ones the user has dealt with.
 - `type` is free text the user picks (work, side project, personal, family, volunteer, travel…).

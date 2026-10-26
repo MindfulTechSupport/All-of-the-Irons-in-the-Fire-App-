@@ -5,6 +5,24 @@ Each version lists what changed and why, newest first.
 
 ---
 
+## 0.5.0 — 2026-10-26
+
+**Theme: an easy way back in.** Coming back to a conversation is easier when someone offers to remind you where you were, then lets you choose where to go next.
+
+### New
+- **Quick summary offer.** When you come back after an hour or more: "Last time we were on the food truck. Want a quick summary of what we were talking about?" If yes, you get 2 to 4 short lines: what was decided, where you stopped, and the next step.
+- **Continue or switch.** Right after: "Want to keep going on the food truck, or work on something else?" Choosing something else offers your one or two hottest irons by name, the catch-up rundown if things are waiting, or something new.
+- **Richer session snapshot.** The plugin now saves a short `summary` (key points, decisions, open questions) at natural stopping points, so the recap is accurate.
+
+### Changed
+- **One question at a time.** The greeting asks a single question and waits; the catch-up count and nickname check-in come after you've picked what to work on.
+- The catch-up count is now stated in the greeting, with the rundown offered as one of the "what next" choices.
+
+### Process
+- Versions are now prepared on a `release/vX.Y.Z` branch with a pull request for review, and published only after Ed approves.
+
+---
+
 ## 0.4.0 — 2026-10-26
 
 **Theme: reaching out, and catching up.** The plugin can now come to you at a time you choose, tells you what's waiting when you've been away, and checks in on the little things like its nickname.
