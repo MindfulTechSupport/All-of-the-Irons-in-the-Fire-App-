@@ -5,6 +5,28 @@ Each version lists what changed and why, newest first.
 
 ---
 
+## 0.3.0 — 2026-10-26
+
+**Theme: keeping time with you.** You sleep, you work, you come back. The plugin should know you've been away and pick up the conversation like a friend would, not start over.
+
+### New
+- **Built-in clock.** Each session starts by checking the current time and your timezone, then working out how long you've been away: under an hour, a few hours, overnight, or days.
+- **Greetings for the time of day.** "Good morning, Ed." "Good afternoon, Ed." "Good evening, Ed." Late at night: "Hey Ed, you're up late."
+- **Greetings that fit the gap.** "Welcome back" after a short break, "Hope you got some rest" after a night's sleep, "Good to see you, it's been 4 days" after a longer stretch, never as a scolding.
+- **Picks up where you left off.** The plugin saves a one-line snapshot (which iron, where you stopped, the next step) and offers it when you come back: "Last time we were on the food truck menu. Want to pick that back up?"
+- **Opener questions to get the juices flowing**, rotated so they don't repeat: "How are you doing this afternoon, Ed?", "What's on your mind?", "Where do you want to put some heat today?", and more.
+- **Give Claude a nickname.** Setup asks what you'd like to call Claude; Ed's pick is ChatBro. Change it anytime ("call yourself ChatBro").
+- **Saves as you go.** The clock and snapshot update at natural stopping points, not just at the end, since people often just walk away. Saying goodnight gets a goodnight back.
+
+### Changed
+- New core principle: keep time with the user, so every return feels like picking up a conversation.
+- Map fields: `last-check-in` (date only) is replaced by `last-seen` (date and time). Added `timezone`, `assistant-name`, `last-session`, and `last-opener`. Maps from 0.1.0 and 0.2.0 keep working and upgrade themselves.
+
+### Honest limits
+- Claude knows the time whenever a session is open, but it doesn't run in the background between sessions. Reminders while you're away still use the optional scheduled task.
+
+---
+
 ## Repository housekeeping — 2026-10-26
 
 No change to the plugin itself.

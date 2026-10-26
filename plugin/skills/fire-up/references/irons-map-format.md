@@ -6,8 +6,15 @@ One Markdown file holds the user's whole map. Keep it human-readable — the use
 # All of my Irons in the Fire!
 
 name: Ed
+assistant-name: ChatBro          # what the user calls Claude; blank = Claude
+timezone: America/Chicago
+last-seen: 2026-10-26 09:23      # local time, updated at natural stopping points
+last-session:
+  iron: Food Truck
+  left-off: deciding the breakfast taco lineup for the farmers market
+  next: pick two tacos and price them
+last-opener: "What's on your mind?"
 review-every: monthly          # every two weeks | monthly | never
-last-check-in: 2026-10-25
 last-review: 2026-10-01
 away-reminder: scheduled task   # scheduled task | next session only
 
@@ -53,6 +60,9 @@ away-reminder: scheduled task   # scheduled task | next session only
 ```
 
 Field notes:
+- `last-seen` replaces the 0.1.0/0.2.0 `last-check-in` (date only). If a map has `last-check-in` and no `last-seen`, read it as that date at noon and write `last-seen` from then on.
+- `timezone` is an IANA name (America/Chicago). Update it if the user says they've moved or are traveling.
+- `last-session` is one short snapshot, overwritten each time. It's for picking up, not a history.
 - `why` is the user's own words for why the iron matters. Use it when an iron is cooling. Leave it blank if they skip it.
 - `sparks` are ideas the user had while working on a different iron. Bring them up next time this iron is worked on, then clear the ones the user has dealt with.
 - `type` is free text the user picks (work, side project, personal, family, volunteer, travel…).

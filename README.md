@@ -1,7 +1,7 @@
 # All of my Irons in the Fire!
 *A Claude plugin by Mindful Tech Projects*
 
-**Current version: 0.2.0** · [Change summary](CHANGELOG.md) · [All releases](releases/)
+**Current version: 0.3.0** · [Change summary](CHANGELOG.md) · [All releases](releases/)
 
 ## What it does
 
@@ -9,7 +9,10 @@ All of my Irons in the Fire! helps people keep every iron in the fire glowing: t
 
 ## How it feels to use
 
-- **It greets you and asks what you're working on.** "Hello, Ed. What are we working on today?"
+- **It keeps time with you.** It knows what time it is and how long you've been away, so you get "Good morning, Ed. Hope you got some rest," not a cold start.
+- **It picks up where you left off.** "Last time we were on the food truck menu. Want to pick that back up?"
+- **It asks a question to get you going.** "How are you doing this afternoon, Ed?" or "What's on your mind?"
+- **You can give Claude a nickname.** ChatBro, anyone?
 - **It sorts it into the right iron.** Say "food truck" and it knows that's your side project. If it isn't sure, it offers a few guesses.
 - **It learns your world.** Each time you confirm or correct, it remembers the words that belong to each iron.
 - **It remembers your why.** Tell it why an iron matters and it brings that back when the iron starts cooling.
@@ -28,11 +31,12 @@ All of my Irons in the Fire! helps people keep every iron in the fire glowing: t
 - When the user strays to another iron in the fire, treat it as a spark worth catching, not a mistake. Help get the idea out, suggest which iron it belongs to, and offer to return to it. Never say "get back on track."
 - The user decides which irons stay in the fire. Pull them out (archive) instead of throwing them away (delete).
 - Learn new keywords only with the user's confirmation.
+- Keep time with the user: know what time it is, how long they've been away, and where they left off, so every return feels like picking up a conversation, not starting over.
 - Ask direction questions, not secrets; this is not a security feature.
 
 ## Install
 
-1. Download the latest `.plugin` file from [Releases](../../releases) (currently `all-my-irons-in-the-fire-v0.2.0.plugin`).
+1. Download the latest `.plugin` file from [Releases](../../releases) (currently `all-my-irons-in-the-fire-v0.3.0.plugin`).
 2. In Claude, open **Customize → Plugins** and upload it.
 3. Start a chat and say **"fire up."**
 
@@ -40,7 +44,7 @@ All of my Irons in the Fire! helps people keep every iron in the fire glowing: t
 
 | Skill | What it's for |
 |---|---|
-| `fire-up` | Greeting, sorting, learning, whys, spark catching, new and cooling irons, first-time setup |
+| `fire-up` | Clock and time-of-day greeting, picking up where you left off, sorting, learning, whys, spark catching, new and cooling irons, first-time setup |
 | `irons-review` | Look at everything; add, rename, merge, rest, archive, revive; update whys |
 | `give-it-a-forge` | Turn a hot iron into its own Claude Project |
 
@@ -54,6 +58,7 @@ plugin/          The plugin's source files (current version)
 releases/        Frozen copies of every version, version number in each file name
   v0.1.0/
   v0.2.0/
+  v0.3.0/
 ```
 
 ## Versioning
