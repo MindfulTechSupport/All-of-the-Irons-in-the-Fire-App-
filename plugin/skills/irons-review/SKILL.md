@@ -14,7 +14,7 @@ Load the Irons Map the same way the `fire-up` skill does (memory `/areas/irons-i
 
 ## The review (keep it short — aim for under two minutes of the user's time)
 
-1. Show a compact snapshot, hottest first:
+1. Show the irons glance (see `fire-up`, "The irons glance": each iron with hours or days since last touched), then a compact snapshot, hottest first:
    - **Glowing** (touched recently)
    - **Cooling** (past their cooling threshold)
    - **Resting**

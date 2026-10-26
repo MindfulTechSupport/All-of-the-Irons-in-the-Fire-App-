@@ -5,7 +5,8 @@
 #   2. Add a "## 0.3.0 — YYYY-MM-DD" section to the top of CHANGELOG.md
 #   3. Add releases/v0.3.0/ with all-my-irons-in-the-fire-v0.3.0.plugin
 #      (plus README-v0.3.0.md and any other versioned snapshots)
-#   4. Push to main. This workflow creates tag v0.3.0 and its Release page,
+#   4. Open a pull request from a release/vX.Y.Z branch. Merge it to main
+#      only after the owner approves. Merging triggers this workflow, which creates tag v0.3.0 and its Release page,
 #      with notes from CHANGELOG.md and every file in releases/v0.3.0/ attached.
 #
 # It can also be run by hand from the Actions tab ("Run workflow").

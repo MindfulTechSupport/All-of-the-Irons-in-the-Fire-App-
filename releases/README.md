@@ -4,6 +4,7 @@ Frozen copies of every version of All of my Irons in the Fire!. Files here are n
 
 | Version | Date | Highlights | Files |
 |---|---|---|---|
+| [v0.5.0](v0.5.0/) | 2026-10-26 | Quick summary of last time, irons glance with time since each was touched, keep going or switch; one question at a time | plugin, README, design notes |
 | [v0.4.0](v0.4.0/) | 2026-10-26 | Daily nudge at a time you pick, catch-up count after time away, nickname check-in | plugin, README, design notes |
 | [v0.3.0](v0.3.0/) | 2026-10-26 | Built-in clock, time-of-day greetings, picks up where you left off, nickname for Claude (ChatBro) | plugin, README, design notes |
 | [v0.2.0](v0.2.0/) | 2026-10-25 | Remembers each iron's "why," catches sparks when you stray, official statement and design principles | plugin, README, design notes |
