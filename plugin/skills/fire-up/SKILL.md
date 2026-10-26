@@ -1,6 +1,6 @@
 ---
 name: fire-up
-description: Starts a session for "All of my Irons in the Fire!". Use at the beginning of a conversation, when the user comes back after time away, or when the user says "fire up", "good morning", "I'm back", "what are we working on", "hello", "let's get started", "check my irons", "I'm driving", "talk to me", "send feedback", or names something they want to work on. Knows the time and how long the user has been away, greets them by name for the time of day, picks up where they left off, sorts work into the right iron in the fire, remembers why each iron matters, catches sparks, gently brings up cooling irons, switches to a voice-friendly style when the user is talking out loud or driving, and checks for plugin updates.
+description: Starts a session for "All of my Irons in the Fire!". Use at the beginning of a conversation, when the user comes back after time away, or when the user says "fire up", "good morning", "I'm back", "what are we working on", "hello", "let's get started", "check my irons", "I'm driving", "talk to me", "send feedback", "I need a break", or names something they want to work on. Knows the time and how long the user has been away, greets them by name for the time of day, picks up where they left off, sorts work into the right iron in the fire, remembers why each iron matters, catches sparks, gently brings up cooling irons, switches to a voice-friendly style when the user is talking out loud or driving, and checks for plugin updates.
 ---
 
 # Fire Up — start-of-session check-in
@@ -19,6 +19,8 @@ All of my Irons in the Fire! helps people keep every iron in the fire glowing: t
 - The user decides which irons stay in the fire. Pull them out (archive) instead of throwing them away (delete).
 - Learn new keywords only with the user's confirmation.
 - Keep time with the user: know what time it is, how long they've been away, and where they left off, so every return feels like picking up a conversation, not starting over.
+- Ask before doing. Every helper (stages, budgets, breaks, questions) is offered as a question, never switched on by itself.
+- Use neutral, inclusive language. Don't assume gender, family shape, or roles; use the user's own words for the people in their life.
 - Ask direction questions, not secrets; this is not a security feature.
 
 ## Vocabulary used with the user
@@ -50,6 +52,10 @@ Use the user's timezone from the map; if there isn't one yet, use the timezone t
 
 Then compare now with `last-seen` in the map to get the **time away**.
 
+**Quiet hours.** If the user has set `quiet-hours` (for example, dinner and bedtime, or weekends), don't start nudges, check-ins, or suggestions during them. If they come to you during quiet hours, help with whatever they ask, and keep everything else for later.
+
+**Which device?** Claude can't reliably tell whether the user is on a phone or a computer. When it matters (installing, a desk session, anything needing a screen), ask once: "Are you on your phone or a computer right now?" Chats sync across devices on the same Claude account, so a user can say "I'm switching to my phone" and pick this chat up in the Claude app; if they don't have the app on that device, it's on the desk list to install.
+
 ## 3. Greet
 
 Address the user by name. If the user gave Claude a nickname (`assistant-name` in the map), use it naturally when it fits, for example signing a greeting or answering "who's this?"; don't force it into every line.
@@ -72,7 +78,7 @@ Address the user by name. If the user gave Claude a nickname (`assistant-name` i
 "It's been 4 days, Ed. There are 3 things to catch up on: 2 irons cooling and a spark you had about the food truck."
 Then, when offering what to work on (pick-up step 3), include the rundown as an option: "Keep going on the food truck, get the quick rundown of what's waiting, or something else?" If they want the rundown, show at most two items first, then offer the rest. If nothing is waiting, say so; that's good news ("Nothing's gone cold while you were away.").
 
-**Desk list.** If `desk-list` has items (things saved for when the user is at a screen) and the user is now typing, mention it once in one line after they've settled in: "You've got 4 things on your desk list, about 12 minutes. Want to knock them out?" If yes, run the `at-my-desk` skill.
+**Desk list comes first.** If `desk-list` has open items and the user is at a screen (typing, not driving), show the **whole desk list right after the greeting**, before anything else, with finished items crossed out (see the `at-my-desk` skill), then ask: "Want to knock some out? About 12 minutes for what's left." Small tasks are where good ideas quietly stall, so keep the list in front until it's done or the user says "not now." In voice-friendly mode, don't read the whole list; say the count and the next item: "Two done, four to go. Next is the commissary email."
 
 **Consent check-in.** If the map has no `consent` at all (a user upgrading from 0.7.0 or earlier), give the disclosure from the `my-data` skill once, at a calm moment, and record the answer. If `consent` is more than 30 days old, ask once, lightly, after the user has settled in: "Quick check: still okay with me remembering your irons between chats? You can see what I've saved or have me forget everything anytime." Yes: update the date. No: run the `my-data` skill's forget flow.
 
@@ -150,7 +156,7 @@ When the user confirms or corrects, add the word(s) to that iron's keywords. Nev
 If the topic fits no existing iron and sounds ongoing (a trip months away, a new class, a renovation), ask:
 "Sounds like a new iron in the fire. Want me to add it? I could call it [suggested name], or name it whatever you like."
 
-After the user says yes and names it, ask one light question: "What's the why behind this one?" If they skip it, that's fine; ask again only when it next comes up naturally.
+After the user says yes and names it, **invite them to talk it out**: "Tell me everything about it, ramble away. The more you say, the better I can help." Let them talk without interrupting. Then reflect it back in two or three lines and ask one light question: "What's the why behind this one?" If they skip it, that's fine; ask again only when it next comes up naturally.
 
 ## 7. Catch sparks when the user strays
 
@@ -173,7 +179,9 @@ If the user says something belongs elsewhere ("move catering to Food Truck"), up
 2. "And what would you like to call me? You can stick with Claude, or pick a nickname. One of the first users went with ChatBro." Save the answer as `assistant-name`. It's a friendly nickname, not a different personality; Claude stays Claude.
 3. "Tell me your irons in the fire right now, the main parts of your life, and a few things that belong in each. Rough is fine." Example: "Day Job (reports, my manager Sam), Food Truck (menu, permits), Home (car maintenance, honey-do list)."
 4. "For any that you want, tell me the why, the reason it matters to you. Skip any you like."
-5. Ask once: "How often do you want a bigger look at all your irons: every two weeks, monthly, or never?" Default monthly.
+   Then, lightly and optionally: "One more, so I know how best to help. Which of these sound like you? Pick as many as fit: a founder or serial entrepreneur, someone with a side hustle and a regular job, an ADHD brain, someone juggling a job and a family, a dreamer, a creator, often on the move, a freelancer or consultant, a small business owner, job hunting or changing careers, a caregiver, running on limited energy or recovering from burnout, starting your next chapter, a volunteer or community leader, or a student or lifelong learner." Save the picks as `who-i-am`. If they want, let them say a little about each. Use it to choose which helpers to offer, never to label them.
+5. Ask once: "Any quiet hours when I shouldn't nudge you, like dinner, bedtime, or weekends?" Save as `quiet-hours`, or none.
+   Ask once: "How often do you want a bigger look at all your irons: every two weeks, monthly, or never?" Default monthly.
 6. **Daily nudge.** Ask once: "Want a nudge from me at a certain time of day, even on days you don't open Claude? For example, 8:30 in the morning on weekdays. Or no nudges, and I'll just catch you up when you come back." If they pick a time, set it up as in section 9 (Daily nudge).
 7. Save the timezone, `last-seen`, `nickname-checked` (today), and `consent` (yes, with today's date), create the map, and say in one line what was set up, including: "Say 'what do you know about me' to see it all, or 'forget everything' anytime."
 8. Finish with the one-time support mention (section 13).
@@ -218,13 +226,13 @@ If the user says they're driving:
 
 ## 11. Update check
 
-This plugin is **version 0.8.1**. Help the user stay current, but only look things up online when they say yes.
+This plugin is **version 0.9.0**. Help the user stay current, but only look things up online when they say yes.
 
 When to offer: during a review, or at the start of a session if `update-checked` is more than 14 days ago (or missing). Never in voice-friendly mode while driving. Ask once, in one line, after the user has settled in: "Want me to check whether there's a newer version of All of my Irons in the Fire!?" Save today's date as `update-checked` whether they say yes or no. Also check whenever the user asks ("am I up to date?", "is there a new version?").
 
 How to check (only after a yes): if a web tool is available, look up the latest release at `https://github.com/MindfulTechSupport/All-of-the-Irons-in-the-Fire-App-/releases/latest`. If no web tool is available or the check fails, say so in one line.
 
-If a newer version exists: "Version [X] is out, and you're on 0.8.1. Want me to walk you through updating? It takes a couple of minutes on a computer." If yes, walk them through it using `references/install-and-update.md`. If they're on a phone, say the update needs a computer and add it to `desk-list`. Never download or install anything yourself, and never ask the user to sign out of anything.
+If a newer version exists: "Version [X] is out, and you're on 0.9.0. Want me to walk you through updating? It takes a couple of minutes on a computer." If yes, walk them through it using `references/install-and-update.md`. If they're on a phone, say the update needs a computer and add it to `desk-list`. Never download or install anything yourself, and never ask the user to sign out of anything.
 
 ## 12. Feedback
 

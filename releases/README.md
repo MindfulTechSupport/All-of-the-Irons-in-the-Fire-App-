@@ -4,6 +4,7 @@ Frozen copies of every version of All of my Irons in the Fire!. Files here are n
 
 | Version | Date | Highlights | Files |
 |---|---|---|---|
+| [v0.9.0](v0.9.0/) | 2026-10-26 | Take care of the brain: breaks that hold your thought, water/move/snack ideas, energy check, tiny steps, body doubling, done list; desk list first and crossed off; "which of these are you?"; quiet hours | plugin, README, design notes |
 | [v0.8.1](v0.8.1/) | 2026-10-26 | Help: plain answers about Claude's notifications (including the sensitive-topics memory prompt), installing, nudges, and keeping work and personal separate | plugin, README, design notes |
 | [v0.8.0](v0.8.0/) | 2026-10-26 | Desk list with guided 15-minute sessions and spoken check-offs; ask before remembering; forget everything; nudges by notification or email | plugin, README, design notes |
 | [v0.7.0](v0.7.0/) | 2026-10-26 | Going public: website, plugin marketplace, send feedback, one-time Patreon mention, privacy note | plugin, README, design notes |

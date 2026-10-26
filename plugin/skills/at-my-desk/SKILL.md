@@ -32,12 +32,12 @@ Triggers: "I'm at my desk," "I'm parked," "desk time," "what do I need to do on 
 3. Show the numbered list (typed) or say the count and first item (spoken).
 4. Ask: "Ready for number one?"
 
-Typed format:
+Typed format: show the **whole list every time**, with finished items **crossed out, not removed**, and a running count. Seeing the line-throughs pile up is the motivation.
 ```
-Desk session, about 14 minutes:
-1. Install version 0.8.0 (plugin, 3 min)
-2. Turn on the website (plugin, 2 min)
-3. Email the commissary about Saturday (food truck, 4 min)
+Desk session, about 14 minutes (2 of 4 done):
+1. ~~Install version 0.9.0 (plugin, 3 min)~~ ✓
+2. ~~Turn on the website (plugin, 2 min)~~ ✓
+3. Email the commissary about Saturday (food truck, 4 min) ← next
 4. Pay the booth fee (food truck, 5 min)
 ```
 
@@ -49,7 +49,7 @@ For the current item:
 - If they get stuck, help right there, then continue.
 
 The user drives the pace with plain words:
-- **"Done," "finished number one," "got it":** check it off ("Nice, that's one down."), remove it from `desk-list`, record it on that iron (and update its `last-touched`), then: "Ready for number two? It's turning on the website, about 2 minutes."
+- **"Done," "finished number one," "got it":** check it off ("Nice, that's one down."), mark it `done` with the date in `desk-list` (keep it there, crossed out, through this session and the next greeting so the progress stays visible), add it to the done list (see `brain-care`), update that iron's `last-touched`, then show the updated list (typed) or say the count (spoken): "Two down, two to go. Ready for number three? It's the commissary email, about 4 minutes."
 - **"Skip," "not now":** leave it on the list and move on.
 - **"Later," "tomorrow":** leave it on the list and move on; don't ask why.
 - **"Stop," "I'm done for now":** stop warmly (see section 4).
@@ -61,9 +61,13 @@ Keep it to one question at a time. Celebrate briefly; don't gush.
 When the time is up or the user stops:
 - Say what got done, in one line: "Three down in 12 minutes. Nice."
 - Say what's left, in one line: "Two more are waiting on your desk list for next time."
-- Save the map (`desk-list`, `last-touched`, `last-seen`).
+- Save the map (`desk-list`, `done-list`, `last-touched`, `last-seen`). Finished items stay crossed out until the user has seen them at the next greeting, then move to the done list only.
 
 Never guilt about leftovers. Unfinished items simply roll to the next session.
+
+## People tasks
+
+Many small tasks are conversations: an email to send, a call to see whether an idea could work, or checking with a partner that taking over the garage is okay. For these, save `who` (who to talk to), `ask` (what to ask or say), and, for messages, offer a short draft the user can send themselves. Never send anything on their behalf.
 
 ## Rules
 
